@@ -146,7 +146,6 @@ Data members in the class must be declared private so that direct access is not 
 Data members in the class must be declared as final so that we can’t change the value of it after object creation.
 A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
 There should be no setters or in simpler terms, there should be no option to change the value of the instance variable.
-By having private constructor we can't be extended to other classes.
 ```
 ____________________________________________________________________________________________
 
@@ -429,8 +428,6 @@ ________________________________________________________________________________
 
 ## Comparable vs comparator
 
-## why java not support call by reference
-
 hash table internal working
 
 what is difference between comparable and comparator in java
@@ -452,17 +449,124 @@ ________________________________________________________________________________
 
 # SPRING QUESTIONS & ANSWERS
 
-## why rest api stateless
+## why rest api stateless?
+```
+REST stands for representational state transfer.
+Being stateless makes REST APIs less complex – by removing all server-side state synchronization logic. A stateless API is also easy to cache as well. ... The server never loses track of “where” each client is in the application because the client sends all necessary information with each request.
+```
 
-## @Qualifier
+## What is stateless and stateful in REST API?
 
-## how to access system properies
+```
+Stateless Protocol does not require the server to retain the server information or session details. Stateful Protocol require server to save the status and session information. In Stateless Protocol, there is no tight dependency between server and client.
+```
 
-## what is singleton, how to achieve
+## What is @Qualifier and it's usage
+```
+The @Qualifier annotation is used to resolve the autowiring conflict, when there are multiple beans of same type. The @Qualifier annotation can be used on any class annotated with @Component or on method annotated with @Bean . This annotation can also be applied on constructor arguments or method parameters
+```
 
-## java 8 features
+## How to access system properties?
+```
+System.getProperty("library.system.property")
+@value(${library.system.property})
+```
 
-## what is AOP
+## What is Singleton?  
+```
+A singleton is a class that allows only a single instance of itself to be created and gives access to that created instance.
+```
+## How to achieve Singleton?
+
+```
+Make constructor private.
+Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization is used to write this static method
+```
+### Code Snippet
+
+```
+// Java program implementing Singleton class
+// with using getInstance() method
+
+// Class 1
+// Helper class
+class Singleton {
+	// Static variable reference of single_instance
+	// of type Singleton
+	private static Singleton single_instance = null;
+
+	// Declaring a variable of type String
+	public String s;
+
+	// Constructor
+	// Here we will be creating private constructor
+	// restricted to this class itself
+	private Singleton()
+	{
+		s = "Hello I am a string part of Singleton class";
+	}
+
+	// Static method
+	// Static method to create instance of Singleton class
+	public static Singleton getInstance()
+	{
+		if (single_instance == null)
+			single_instance = new Singleton();
+
+		return single_instance;
+	}
+}
+
+// Class 2
+// Main class
+class GFG {
+	// Main driver method
+	public static void main(String args[])
+	{
+		// Instantiating Singleton class with variable x
+		Singleton x = Singleton.getInstance();
+
+		// Instantiating Singleton class with variable y
+		Singleton y = Singleton.getInstance();
+
+		// Instantiating Singleton class with variable z
+		Singleton z = Singleton.getInstance();
+
+		// Printing the hash code for above variable as
+		// declared
+		System.out.println("Hashcode of x is "
+						+ x.hashCode());
+		System.out.println("Hashcode of y is "
+						+ y.hashCode());
+		System.out.println("Hashcode of z is "
+						+ z.hashCode());
+
+		// Condition check
+		if (x == y && y == z) {
+
+			// Print statement
+			System.out.println(
+				"Three objects point to the same memory location on the heap i.e, to the same object");
+		}
+
+		else {
+			// Print statement
+			System.out.println(
+				"Three objects DO NOT point to the same memory location on the heap");
+		}
+	}
+}
+
+------------------------------------------------------------------------------------
+
+OUTPUT:
+Hashcode of x is 558638686
+Hashcode of y is 558638686
+Hashcode of z is 558638686
+Three objects point to the same memory location on the heap i.e, to the same object
+```
+
+## What is AOP?
 
 ## what are the beans available
 
