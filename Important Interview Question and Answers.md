@@ -89,6 +89,7 @@ It allows final methods also.
 | Abstract class doesn't support multiple inheritance. | Interface supports multiple inheritance. |
 | Abstract class can have final, non-final, static and non-static variables. | Interface has only static and final variables. |
 | Abstract class can have final methods. | Interface must have only non-final methods. |
+| Abstract class can have constructors. | Interface can't have constructors. |
 
 ____________________________________________________________________________________________
 
@@ -186,6 +187,238 @@ In Java, an exception is an event that disrupts the normal flow of the program w
 
 ____________________________________________________________________________________________
 
+## Difference between super method  and keyword 
+
+| Super method - super() | super keyword - super |
+| --- | --- |
+| The super() in Java is a reference variable that is used to refer parent class constructors. | The super keyword in Java is a reference variable that is used to refer parent class objects. |
+| super can be used to call parent class’ variables and methods.| super() can be used to call parent class’ constructors only. |
+| The variables and methods to be called through super keyword can be done at any time inside the **static** methods only. | Call to super() must be first statement in Derived(Student) Class constructor. |
+| If one does not explicitly invoke a superclass variables or methods, by using super keyword, then nothing happens. | If a constructor does not explicitly invoke a superclass constructor by using super(), the Java compiler automatically inserts a call to the no-argument constructor of the superclass. |
+____________________________________________________________________________________________
+
+## Calling parent method and constructor
+
+```
+Parent constructor can be called by using super().
+Parent methods and variables can be called from super keyword
+```
+
+### Code Snippet
+```
+public class Exercises2 {
+
+	int Exercises2Var = 100;
+
+	public Exercises2() {
+
+		super();
+		System.out.println("Exercises2 constructor is called");
+	}
+
+	public Exercises2(int b) {
+
+		super();
+		System.out.println("Exercises2 parameterized constructor is called - b = "+b);
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+public class Exercises extends Exercises2{
+	
+	private Exercises() {
+		
+		// this will call the parent class constructor
+		//super();
+		
+		// this will call the parent class parameterized constructor
+		//super(1000);
+		
+		// if no super method is available then parent class default  constructor will be called 
+		System.out.println("Exercises constructor is called");
+	}
+	
+	void callByReference1(int b) {
+		
+		b = super.Exercises2Var;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		new Exercises();
+		
+		// ERR: Cannot use super in a static context
+		// int b = super.Exercises2Var;
+	}
+
+}
+```
+____________________________________________________________________________________________
+
+## Constructor overloading
+
+```
+public class Exercises extends Exercises2 {
+
+	private Exercises() {
+
+		// this will call the parent class constructor
+		// super();
+
+		// this will call the parent class parameterized constructor
+		 super(1000);
+
+		// if no super method is available then parent class default constructor will be
+		// called
+		System.out.println("Exercises constructor is called");
+	}
+
+	private Exercises(int a) {
+
+		// if no super method is available then parent class default constructor will be called
+		System.out.println("Exercises parameterized constructor is called - a ="+a);
+	}
+
+	void callByReference1(int b) {
+
+		b = super.Exercises2Var;
+	}
+
+	public static void main(String[] args) {
+
+		new Exercises();
+		System.out.println("-----------------------------------------------");
+		new Exercises(100);
+
+	}
+
+}
+```
+
+```
+Exercises2 parameterized constructor is called - b = 1000
+Exercises constructor is called
+-----------------------------------------------
+Exercises2 constructor is called
+Exercises parameterized constructor is called - a =100
+```
+____________________________________________________________________________________________
+
+## Difference between classdefnotfoundexception and classnotfoundexception
+
+```
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.
+NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
+```
+____________________________________________________________________________________________
+
+## Concurrency exception
+
+```
+The ConcurrentModificationException occurs when an object is tried to be modified concurrently when it is not permissible. This exception usually comes when one is working with Java Collection classes.
+```
+### Code Snippet
+```
+package basics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exercises {
+
+	public static void main(String[] args) {
+
+		List<String> listOfBooks = new ArrayList<>();
+		listOfBooks.add("Programming Pearls");
+		listOfBooks.add("Clean Code");
+		listOfBooks.add("Effective Java");
+		listOfBooks.add("Code Complete");
+		// Using forEach loop to iterate and removing
+		// element during iteration will
+		// throw // ConcurrentModificationException in Java
+		for (String book : listOfBooks) {
+			if (book.contains("Code"))
+			{
+				listOfBooks.remove(book);
+			}
+		}
+
+	}
+
+}
+
+OUTPUT:
+Exception in thread "main" java.util.ConcurrentModificationException
+	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1013)
+	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:967)
+	at basics.Exercises.main(Exercises.java:18)
+
+
+---------------------------------------------------------------------------
+
+package basics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exercises {
+
+	public static void main(String[] args) {
+
+		List<String> listOfBooks = new ArrayList<>();
+		listOfBooks.add("Clean Code");
+		listOfBooks.add("Effective Java");
+		listOfBooks.add("Code Complete");
+		listOfBooks.add("Programming Pearls");
+
+		System.out.println("List before : " + listOfBooks);
+		for (int i = 0; i < listOfBooks.size(); i++) {
+			System.out.println("listOfBooks.size() = "+listOfBooks.size()+" - index ="+i);
+			String book = listOfBooks.get(i);
+			if (book.contains("Programming")) {
+				System.out.println("Removing " + book);
+				listOfBooks.remove(i); // will throw CME
+				System.out.println("after removed - listOfBooks.size() = "+listOfBooks.size()+" - index ="+i);
+			}
+		}
+		System.out.println("List after : " + listOfBooks);
+	}
+}
+
+OUTPUT:
+List before : [Clean Code, Effective Java, Code Complete, Programming Pearls]
+listOfBooks.size() = 4 - index =0
+listOfBooks.size() = 4 - index =1
+listOfBooks.size() = 4 - index =2
+listOfBooks.size() = 4 - index =3
+Removing Programming Pearls
+after removed - listOfBooks.size() = 3 - index =3
+List after : [Clean Code, Effective Java, Code Complete]
+```
+
+____________________________________________________________________________________________
+
+## what is Serialization and its purpose
+
+```
+Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed.
+```
+____________________________________________________________________________________________
+
+## How to override static method possibilities?
+
+```
+Can we Override static methods in java? We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won't be any run-time polymorphism. Hence the answer is 'No'.
+```
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+
 ## hashmap vs hashtable
 
 ## array list vs asList
@@ -199,30 +432,22 @@ ________________________________________________________________________________
 ## why java not support call by reference
 
 hash table internal working
+
 what is difference between comparable and comparator in java
+
 difference between treemap and hashmap in java
+
 Arraylist synchronised
+
 Duplicate removal from list
 
-
-
-
-
-Super method  and keyword - calling parent method
-Constructor overloading
-
-difference between classdefnotfoundexception and classnotfoundexception
-
-
-
 why is rest api stateless
-
-what is Serialization and its purpose
-override static method possibilities
 
 Design patterns and SOLID principles and Agile method
 
 Java8 java 11 features
+
+____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
 # SPRING QUESTIONS & ANSWERS
@@ -251,10 +476,9 @@ ________________________________________________________________________________
 
 what is functional interface in java
 spring boot latest version features
+what is the use of marker interface in java with example
 
 what is purpose @qualifier in spring
-
-concurrency exception
 
 how to write a select query with 2 schema postgres
 
@@ -276,4 +500,9 @@ HttpServletResponse  - Redirect -       - same request with original params and 
 
 
 Spring boot cache
+
+# spring security in spring boot
+# how to communicate between applications in spring boot
+
+fail fast and fail safe difference
 
