@@ -414,9 +414,16 @@ ________________________________________________________________________________
 ```
 Can we Override static methods in java? We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won't be any run-time polymorphism. Hence the answer is 'No'.
 ```
+
+
+## What is functional interface in java?
+
+## What is the use of marker interface in java with example?
+
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
+# Collections
 
 ## hashmap vs hashtable
 
@@ -444,6 +451,8 @@ Design patterns and SOLID principles and Agile method
 
 Java8 java 11 features
 
+## Difference between collecctions/stream
+
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
@@ -461,7 +470,7 @@ Being stateless makes REST APIs less complex – by removing all server-side sta
 Stateless Protocol does not require the server to retain the server information or session details. Stateful Protocol require server to save the status and session information. In Stateless Protocol, there is no tight dependency between server and client.
 ```
 
-## What is @Qualifier and it's usage
+## What is @Qualifier and it's usage and what is purpose @qualifier in spring?
 ```
 The @Qualifier annotation is used to resolve the autowiring conflict, when there are multiple beans of same type. The @Qualifier annotation can be used on any class annotated with @Component or on method annotated with @Bean . This annotation can also be applied on constructor arguments or method parameters
 ```
@@ -476,11 +485,12 @@ System.getProperty("library.system.property")
 ```
 A singleton is a class that allows only a single instance of itself to be created and gives access to that created instance.
 ```
+
 ## How to achieve Singleton?
 
 ```
 Make constructor private.
-Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization is used to write this static method
+Write a static method that has return type object of this singleton class.
 ```
 ### Code Snippet
 
@@ -568,45 +578,57 @@ Three objects point to the same memory location on the heap i.e, to the same obj
 
 ## What is AOP?
 
-## what are the beans available
+```
+AOP (Aspect-Oriented Programming) is a programming pattern that increases modularity by allowing the separation of the cross-cutting concern.
+```
 
-## what are annotations used for controller class
+## What are annotations used for controller class
+```
+@RestController is a convenience annotation for creating Restful controllers
+```
 
-## dependency injection
+## What is Dependency Injection?
+```
+It's a technique work done by the use of another class. It can be done by normal setter, by constructor and by @Autowired.
+```
 
-## IOC
+## What is IOC?
+```
+It's a framework for implementing automatic dependency injection. The IoC container creates an object of the specified class and also injects the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
+```
 
 ## springboot authentication
 
-what is functional interface in java
-spring boot latest version features
-what is the use of marker interface in java with example
+## spring boot latest version features
 
-what is purpose @qualifier in spring
+## how to ignore a class in spring boot - https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
 
-how to write a select query with 2 schema postgres
+## internal process of singleton and its purpose
 
-Jpa create table/column automatically configuration
+## ways to connect DB in spring boot
 
-
-#1 many to many / many to one
-#2 left join - if condition not meet
-#3 how to ignore a class in spring boot - https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
-#4 internal process of singleton and its purpose
-#5 ways to connect DB in spring boot
-
-
-
-difference b/w redirect and forward
+## difference b/w redirect and forward
 RequestDispatcher - Forward - faster than redirect - lost original params and attributes - client side reflect will happen
 HttpServletResponse  - Redirect -       - same request with original params and attributes used - client side no effect will happen
-
-
-
-Spring boot cache
 
 # spring security in spring boot
 # how to communicate between applications in spring boot
 
 fail fast and fail safe difference
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+
+# JPA / Hibernate / DB Questions and Answers
+
+## Spring boot cache
+
+## How to write a select query with 2 schema postgres
+
+## Jpa create table/column automatically configuration
+
+## many to many / many to one
+## left join - if condition not meet
+
 
