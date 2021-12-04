@@ -601,20 +601,140 @@ It's a framework for implementing automatic dependency injection. The IoC contai
 
 ## spring boot latest version features
 
-## how to ignore a class in spring boot - https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
+## How to ignore a class in spring boot 
+https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
 
-## internal process of singleton and its purpose
+```
+@SpringBootApplication(exclude= {WorkerExecutors.class, Worker.class,WorkerConfig.class})
+public class Application {
+```
 
-## ways to connect DB in spring boot
+## Internal process of singleton and its purpose
 
-## difference b/w redirect and forward
-RequestDispatcher - Forward - faster than redirect - lost original params and attributes - client side reflect will happen
-HttpServletResponse  - Redirect -       - same request with original params and attributes used - client side no effect will happen
+[singleton](https://github.com/VigneshOfficial2020/interview-questions-answers/blob/main/Important%20Interview%20Question%20and%20Answers.md#what-is-singleton)
 
-# spring security in spring boot
-# how to communicate between applications in spring boot
+## Ways to connect DB in spring boot
+```
+From Application.properties file
 
-fail fast and fail safe difference
+spring.jpa.hibernate.ddl-auto=none
+spring.datasource.url=<<JDBC_URL>>
+spring.datasource.username=<<user_name>>
+spring.datasource.password=<<password>>
+```
+
+## Difference b/w Redirect and Forward
+
+| Forward | Redirect |
+| --- | --- |
+| The client isn't impacted by forward, URL in a browser stays the same. | The client will see the URL change after the redirect. |
+| Request attributes and  parameters will be the same. | A new request is created. So, params and aattributes will get lost. |
+| RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath()); rd.forward(request, response); | resp.sendRedirect(req.getContextPath() + "/redirected"); |
+
+
+## Spring security in spring boot
+
+## How to communicate between applications in spring boot
+```
+That depends on your choice, weather you want sync communication or async communication between your services.
+
+For sync services you can use either of these 3rd party tools:
+Hashcorp Consul
+Netflix Eureka [You may client load balancing using Netflix RIBBON ]
+NATS etc
+
+For Async you can use messaging solutions like:
+Redis [use list/streams]
+ActiveMQ
+RabitMQ
+Kafka
+NATS etc
+```
+
+## Fail fast and fail safe difference
+```
+The major difference is fail-safe iterator doesn’t throw any Exception, contrary to fail-fast Iterator.This is because they work on a clone of Collection instead of the original collection and that’s why they are called as the fail-safe iterator.
+```
+### Fail fast - Code Snippet
+```
+// Java code to demonstrate remove
+// case in Fail-fast iterators
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class FailFastExample {
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> al = new ArrayList<>();
+		al.add(1);
+		al.add(2);
+		al.add(3);
+		al.add(4);
+		al.add(5);
+
+		Iterator<Integer> itr = al.iterator();
+		while (itr.hasNext()) {
+			if (itr.next() == 2) {
+				// will not throw Exception
+				itr.remove();
+			}
+		}
+
+		System.out.println(al);
+
+		itr = al.iterator();
+		while (itr.hasNext()) {
+			if (itr.next() == 3) {
+				// will throw Exception on
+				// next call of next() method
+				al.remove(3);
+			}
+		}
+	}
+}
+
+
+OUTPUT:
+[1, 3, 4, 5]
+Exception in thread "main" java.util.ConcurrentModificationException
+    at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+    at java.util.ArrayList$Itr.next(ArrayList.java:851)
+    at FailFastExample.main(FailFastExample.java:28)
+```
+
+### Fail safe - Code Snippet
+```
+// Java code to illustrate
+// Fail Safe Iterator in Java
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Iterator;
+
+class FailSafe {
+	public static void main(String args[])
+	{
+		CopyOnWriteArrayList<Integer> list
+			= new CopyOnWriteArrayList<Integer>(new Integer[] { 1, 3, 5, 8 });
+		Iterator itr = list.iterator();
+		while (itr.hasNext()) {
+			Integer no = (Integer)itr.next();
+			System.out.println(no);
+			if (no == 8)
+
+				// This will not print,
+				// hence it has created separate copy
+				list.add(14);
+		}
+	}
+}
+
+
+OUTPUT:
+1
+3
+5
+8
+```
 
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
@@ -629,6 +749,7 @@ ________________________________________________________________________________
 ## Jpa create table/column automatically configuration
 
 ## many to many / many to one
+
 ## left join - if condition not meet
 
 
