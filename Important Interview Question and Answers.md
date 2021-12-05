@@ -403,27 +403,66 @@ List after : [Clean Code, Effective Java, Code Complete]
 ____________________________________________________________________________________________
 
 ## what is Serialization and its purpose
-
 ```
 Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed.
 ```
 ____________________________________________________________________________________________
 
-## How to override static method possibilities?
-
+## Override static methods?
 ```
 Can we Override static methods in java? We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won't be any run-time polymorphism. Hence the answer is 'No'.
 ```
 
+## What is Functional Interface in java?
+```
+A functional interface has only one abstract method but it can have multiple default methods.
+@FunctionalInterface annotation is used to ensure an interface can’t have more than one abstract method. The use of this annotation is optional.
 
-## What is functional interface in java?
+The major benefit of java 8 functional interfaces is that we can use lambda expressions to instantiate them and avoid using bulky anonymous class implementation.
+```
+### Code Snippet
+```
+// Java program to demonstrate lambda expressions to implement
+// a user defined functional interface.
 
-## What is the use of marker interface in java with example?
+@FunctionalInterface
+interface Square
+{
+	int calculate(int x);
+}
+
+class Test
+{
+	public static void main(String args[])
+	{
+		int a = 5;
+
+		// lambda expression to define the calculate method
+		Square s = (int x)->x*x;
+
+		// parameter passed and return type must be
+		// same as defined in the prototype
+		int ans = s.calculate(a);
+		System.out.println(ans);
+	}
+}
+
+
+Output: 
+25
+```
+
+## What is the use of Marker Interface in java with example?
+```
+A marker interface is an interface that has no methods or constants inside it. It provides run-time type information about objects, so the compiler and JVM have additional information about the object. A marker interface is also called a tagging interface.
+
+Example: In DTO fields we can enable the validation for the specific fields by using marker interface.
+```
 
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
-# Collections
+# Collections Interview Questions and Answers
 
 ## hashmap vs hashtable
 
@@ -597,9 +636,9 @@ It's a technique work done by the use of another class. It can be done by normal
 It's a framework for implementing automatic dependency injection. The IoC container creates an object of the specified class and also injects the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
 ```
 
-## springboot authentication
+## Spring-boot Authentication
 
-## spring boot latest version features
+## Spring-boot latest version features
 
 ## How to ignore a class in spring boot 
 https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
