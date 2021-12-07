@@ -774,6 +774,19 @@ OUTPUT:
 5
 8
 ```
+## What is Spring boot Auto configuration
+```
+Spring Boot auto-configuration automatically configures the Spring application based on the jar dependencies that we have added.
+
+For example, if the H2 database Jar is present in the classpath and we have not configured any beans related to the database manually, the Spring Boot's auto-configuration feature automatically configures it in the project.
+
+We can enable the auto-configuration feature by using the annotation @EnableAutoConfiguration. But this annotation does not use because it is wrapped inside the @SpringBootApplication annotation. The annotation @SpringBootApplication is the combination of three annotations: @ComponentScan, @EnableAutoConfiguration, and @Configuration. However, we use @SpringBootApplication annotation instead of using @EnableAutoConfiguration.
+
+@SpringBootApplication=@ComponentScan+@EnableAutoConfiguration+@Configuration
+```
+
+## Differnece between Spring And Spring boot
+![image](https://user-images.githubusercontent.com/70185865/144986167-5aa51ca3-8a01-402e-8afb-b5a8382c1ba3.png)
 
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
@@ -782,12 +795,43 @@ ________________________________________________________________________________
 # JPA / Hibernate / DB Questions and Answers
 
 ## Spring boot cache
+https://github.com/VigneshOfficial2020/spring-boot-cache-demo-app
 
 ## How to write a select query with 2 schema postgres
 
 ## Jpa create table/column automatically configuration
+```
+# if any table or column is missing in DB below command will create them specifically during build process
+spring.jpa.generate-ddl=true
 
-## many to many / many to one
+# if any table or column is missing in DB below command will drop and create them during build process
+#spring.jpa.hibernate.ddl-auto = update 
+#spring.jpa.hibernate.ddl-auto = create
+```
+
+## many to many / many to one / one to many associations
+```
+many to one
+-----------
+===== >>> in the table_1
+
+@JsonIgnore
+@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+@JoinColumn(name = "table_2_id")
+private Table_2									table_2;
+
+
+One To Many / ManyToMany
+-------------------------
+===== >>>> in the table_2
+
+@JsonManagedReference
+@OneToMany(fetch = FetchType.LAZY, mappedBy = "table_1", cascade = { CascadeType.MERGE })
+@Where(clause = "status <> 'deleted'")
+@OrderBy(value = "name ASC")
+private List<Table_1>				table_1						= new ArrayList<>();
+
+```
 
 ## left join - if condition not meet
 
