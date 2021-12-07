@@ -833,6 +833,43 @@ private List<Table_1>				table_1						= new ArrayList<>();
 
 ```
 
-## left join - if condition not meet
+## What will return on left outer join - if condition not meet with table_2
+```
+table_2 values will be shown as null.
+```
+ref: https://towardsdatascience.com/what-is-the-difference-between-an-inner-and-an-outer-join-in-sql-5b5ec8277377
+
+## Postgres cheat-sheet
+
+![image](https://user-images.githubusercontent.com/70185865/145044344-bddd2f6e-4180-4028-a990-7f25564a6b12.png)
+
+![image](https://user-images.githubusercontent.com/70185865/145044398-6c172bea-a4bb-4e32-90dc-dd0de4a351f2.png)
+
+![image](https://user-images.githubusercontent.com/70185865/145044446-d620a8fc-34a4-43d3-9470-1fe983dc0289.png)
+
+
+## Difference between Truncate, DROP & DELETE
+```
+The DELETE statement scans every row before deleting it. Thus it is slower as compared to TRUNCATE command. If we want to delete all the records of a table, it is preferable to use TRUNCATE in place of DELETE.
+
+A DROP statement in SQL removes a component from a relational database management system (RDBMS). DROP is a DDL Command. Objects deleted using DROP are permanently lost and it cannot be rolled back.
+```
+ref : https://afteracademy.com/blog/what-is-the-difference-between-truncate-delete-and-drop-statements
+
+## Rename the column name and change the type
+```
+ALTER TABLE public.clients
+    ALTER COLUMN client_name_1 type int
+	using client_name_1::integer;
+	
+ALTER TABLE public.clients
+    ALTER COLUMN client_name_1 type varchar;	
+	
+	
+ALTER TABLE public.clients RENAME COLUMN client_name_1 to client_name_2;
+```
+
+## Postgres queries examples
+https://www.enterprisedb.com/postgres-tutorials/postgresql-query-introduction-explanation-and-50-examples
 
 
