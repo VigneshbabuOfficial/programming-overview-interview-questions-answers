@@ -465,10 +465,17 @@ Example: In DTO fields we can enable the validation for the specific fields by u
 
 ### JAVA 8 FEATURES
 	
-Lambda Expression
-```
+#### Lambda Expression
+`
 A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 		they can be implemented right in the body of a method.
-```	
+`
+#### Method Reference
+
+
+
+
+## How to use generic for arguments in method
+	
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
@@ -482,13 +489,11 @@ ________________________________________________________________________________
 
 ## TreeMap vs HashMap
 
-## Comparable vs comparator
-
 ## Hash table internal working
 
 ## What is difference between comparable and comparator in java
 
-## Difference between treemap and hashmap in java
+## Difference between Treemap and Hashmap in java
 
 ## How to create Arraylist as Synchronised
 
@@ -792,6 +797,7 @@ We can enable the auto-configuration feature by using the annotation @EnableAuto
 ## Differnece between Spring And Spring boot
 ![image](https://user-images.githubusercontent.com/70185865/144986167-5aa51ca3-8a01-402e-8afb-b5a8382c1ba3.png)
 
+## How to exclude classes in spring boot
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
@@ -876,4 +882,16 @@ ALTER TABLE public.clients RENAME COLUMN client_name_1 to client_name_2;
 ## Postgres queries examples
 https://www.enterprisedb.com/postgres-tutorials/postgresql-query-introduction-explanation-and-50-examples
 
+## Explain Transactional annnotation ( @Transactional )
+`It used to provide database transaction for the queries which we used to execute or by using jpa methods. So, whenever exception occurs this will be roll back automatically.`
 
+### Propagation
+
+
+### Isolation
+	
+## How to find second max in sql
+
+## why indexes used
+
+	
