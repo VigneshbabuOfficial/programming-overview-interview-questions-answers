@@ -459,14 +459,24 @@ A marker interface is an interface that has no methods or constants inside it. I
 Example: In DTO fields we can enable the validation for the specific fields by using marker interface.
 ```
 
+## Design patterns and SOLID principles and Agile method
+
+## Java8, Java 11 & Java 16 features
+
+### JAVA 8 FEATURES
+	
+Lambda Expression
+```
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 		they can be implemented right in the body of a method.
+```	
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
 # Collections Interview Questions and Answers
 
-## hashmap vs hashtable
+## Hashmap vs hashtable
 
-## array list vs asList
+## ArrayList vs Arrays.asList
 
 ## Set vs Map
 
@@ -474,21 +484,15 @@ ________________________________________________________________________________
 
 ## Comparable vs comparator
 
-hash table internal working
+## Hash table internal working
 
-what is difference between comparable and comparator in java
+## What is difference between comparable and comparator in java
 
-difference between treemap and hashmap in java
+## Difference between treemap and hashmap in java
 
-Arraylist synchronised
+## How to create Arraylist as Synchronised
 
-Duplicate removal from list
-
-why is rest api stateless
-
-Design patterns and SOLID principles and Agile method
-
-Java8 java 11 features
+## Duplicate removal from list
 
 ## Difference between collecctions/stream
 
