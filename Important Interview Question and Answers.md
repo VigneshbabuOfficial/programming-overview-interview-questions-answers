@@ -321,6 +321,12 @@ ________________________________________________________________________________
 ```
 The ConcurrentModificationException occurs when an object is tried to be modified concurrently when it is not permissible. This exception usually comes when one is working with Java Collection classes.
 ```
+```
+NOTE : 
+whenever using for-each loop, iterator is using behind. So, when we change the original collection values, iterator.next() will be executed and checks modCount. And so if any difference occurs it'll throw an error.
+But, if we use normal for loop with index, it'll directly add / remove element original collection and the size will changed dynamically based on the operations. So, we won't get any exceptions.
+```
+
 ### Code Snippet
 ```
 package basics;
