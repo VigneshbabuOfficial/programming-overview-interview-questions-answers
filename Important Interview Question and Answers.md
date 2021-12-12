@@ -534,7 +534,31 @@ MRInterface - cccc -
 
 ## Java 11 features
 
+#### Running Java File with single command - java Classname, means we dont need to compile using javac.
+#### Java String Methods - .isBlank(), .lines(), strip(), stripLeading(), stripTrailing()
+#### Nested Based Access Control
+```
+public class Main {
+ 
+    public void myPublic() {
+    }
+ 
+    private void myPrivate() {
+    }
+ 
+    class Nested {
+ 
+        public void nestedPublic() {
+            myPrivate();
+        }
+    }
+}
+
+```
+
 ## Java 16 features
+
+#### Sealed Classes
 
 ## How to use generic for arguments in method
 
