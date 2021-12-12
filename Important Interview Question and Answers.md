@@ -476,11 +476,69 @@ Example: In DTO fields we can enable the validation for the specific fields by u
 A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 		they can be implemented right in the body of a method.
 `
 #### Method Reference
+`
+Its a new technique where we can use method name along with class name or interface like InterFace::methodName / ClassName::methodName inorder to complete a specific task.
+`
+##### Code Snippet
+```
+class MRClass {
+	
+	static String showMethod(String str) {
+		return "MRClass - "+str+" - ";
+	}
+}
+
+interface MRInterface {
+	
+	static String showMethod(String str) {
+		return "MRInterface - "+str+" - ";
+	}
+}
 
 
+public class Exercises2 {
 
+
+public static void main(String[] args) {
+
+List<String> strList = Arrays.asList("aaaa","bbbb","cccc");
+
+System.out.println("====================MRClass::showMethod==============================");
+strList.stream().map(MRClass::showMethod).forEach(System.out::println);
+		
+System.out.println("====================MRInterface::showMethod==============================");
+strList.stream().map(MRInterface::showMethod).forEach(System.out::println);
+
+}
+
+}
+
+OUTPUT:
+====================MRClass::showMethod==============================
+MRClass - aaaa - 
+MRClass - bbbb - 
+MRClass - cccc - 
+====================MRInterface::showMethod==============================
+MRInterface - aaaa - 
+MRInterface - bbbb - 
+MRInterface - cccc - 
+```
+
+#### Functional interfaces
+#### Stream API
+#### Default methods
+#### Static methods in interface
+#### Optional class
+#### Collectors class
+#### ForEach() method
+
+## Java 11 features
+
+## Java 16 features
 
 ## How to use generic for arguments in method
+
+## How to send HTTP request and receive HTTP response
 	
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
