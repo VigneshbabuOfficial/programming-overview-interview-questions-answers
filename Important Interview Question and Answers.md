@@ -563,7 +563,100 @@ public class Main {
 ## How to use generic for arguments in method
 
 ## How to send HTTP request and receive HTTP response
-	
+#### Java 11 HttpClient
+```
+package basics;
+
+import java.net.URI;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
+
+public class HttpClientExample {
+
+	// one instance, reuse
+    private final HttpClient httpClient = HttpClient.newBuilder()
+            .version(HttpClient.Version.HTTP_2)
+            .build();
+
+    public static void main(String[] args) throws Exception {
+
+    	HttpClientExample obj = new HttpClientExample();
+
+        System.out.println("Testing 1 - Send Http GET request");
+        obj.sendGet();
+
+        System.out.println("Testing 2 - Send Http POST request");
+        obj.sendPost();
+
+    }
+
+    private void sendGet() throws Exception {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .GET()
+                .uri(URI.create("https://httpbin.org/get"))
+                .setHeader("User-Agent", "Java 11 HttpClient Bot")
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // print status code
+        System.out.println(response.statusCode());
+
+        // print response body
+        System.out.println(response.body());
+
+    }
+
+    private void sendPost() throws Exception {
+
+        // form parameters
+        Map<Object, Object> data = new HashMap<>();
+        data.put("username", "abc");
+        data.put("password", "123");
+        data.put("custom", "secret");
+        data.put("ts", System.currentTimeMillis());
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(buildFormDataFromMap(data))
+                .uri(URI.create("https://httpbin.org/post"))
+                .setHeader("User-Agent", "Java 11 HttpClient Bot") // add request header
+                .header("Content-Type", "application/x-www-form-urlencoded")
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // print status code
+        System.out.println(response.statusCode());
+
+        // print response body
+        System.out.println(response.body());
+
+    }
+
+    private static HttpRequest.BodyPublisher buildFormDataFromMap(Map<Object, Object> data) {
+        var builder = new StringBuilder();
+        for (Map.Entry<Object, Object> entry : data.entrySet()) {
+            if (builder.length() > 0) {
+                builder.append("&");
+            }
+            builder.append(URLEncoder.encode(entry.getKey().toString(), StandardCharsets.UTF_8));
+            builder.append("=");
+            builder.append(URLEncoder.encode(entry.getValue().toString(), StandardCharsets.UTF_8));
+        }
+        System.out.println(builder.toString());
+        return HttpRequest.BodyPublishers.ofString(builder.toString());
+    }
+}
+
+```
+
+
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
@@ -886,6 +979,10 @@ We can enable the auto-configuration feature by using the annotation @EnableAuto
 ![image](https://user-images.githubusercontent.com/70185865/144986167-5aa51ca3-8a01-402e-8afb-b5a8382c1ba3.png)
 
 ## How to exclude classes in spring boot
+```
+@ComponentScan(excludeFilters  = {@ComponentScan.Filter(
+              type = FilterType.ASSIGNABLE_TYPE, classes = {WorkerConfig.class, WorkerExecutors.class, Worker.class})})
+```
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
@@ -974,12 +1071,81 @@ https://www.enterprisedb.com/postgres-tutorials/postgresql-query-introduction-ex
 `It used to provide database transaction for the queries which we used to execute or by using jpa methods. So, whenever exception occurs this will be roll back automatically.`
 
 ### Propagation
-
+#### Required , Nested  SUPPORTS , MANDATORY , NEVER , NOT_SUPPORTED , REQUIRES_NEW 
 
 ### Isolation
+#### READ_UNCOMMITTED , READ_COMMITTED , 
 	
 ## How to find second max in sql
 
+
+![image](https://user-images.githubusercontent.com/70185865/145718507-9a82a743-39fa-4614-84a2-cb9a91883679.png)
+
+```
+SELECT
+	product_id,
+	product_name,
+	group_name,
+	price,
+	RANK () OVER ( 
+		PARTITION BY p.group_id
+		ORDER BY price DESC
+	) price_rank ,
+	p.group_id 
+FROM
+	product p
+	INNER JOIN product_group g 
+		ON g.group_id = p.group_id;
+```
+![image](https://user-images.githubusercontent.com/70185865/145718631-3438b2a6-cd4d-4133-a142-35c0aa07d304.png)
+
+```
+SELECT 
+    product_id,
+    product_name,
+    price,
+    group_id,
+	RANK () OVER ( 
+		PARTITION BY group_id
+		ORDER BY price DESC
+	) price_rank ,
+    NTH_VALUE(product_name, 2) 
+    OVER(
+        PARTITION BY group_id
+        ORDER BY price DESC
+        RANGE BETWEEN 
+            UNBOUNDED PRECEDING AND 
+            UNBOUNDED FOLLOWING
+    ) 
+FROM 
+    product;
+```
+![image](https://user-images.githubusercontent.com/70185865/145718771-b5abc0e6-0461-4356-a40f-033b57dae086.png)
+
+SECOND MAXIMUM
+```
+SELECT p.product_name 
+FROM (
+      SELECT product_name,
+          DENSE_RANK() OVER ( ORDER BY price DESC ) AS RANK 
+      FROM product
+	  WHERE group_id = 1
+      ) as p 
+WHERE p.rank = 2
+
+
+OUTPUT:
+Nexus
+```
+
+
 ## why indexes used
+
+# POSTGRES NOTES
+
+
+
+
+
 
 	
