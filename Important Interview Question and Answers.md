@@ -983,6 +983,11 @@ We can enable the auto-configuration feature by using the annotation @EnableAuto
 @ComponentScan(excludeFilters  = {@ComponentScan.Filter(
               type = FilterType.ASSIGNABLE_TYPE, classes = {WorkerConfig.class, WorkerExecutors.class, Worker.class})})
 ```
+
+## How Spring boot application works internally?
+![spring-boot-internal-working-diag](https://user-images.githubusercontent.com/70185865/146032786-004189ff-480a-45e1-96f1-b6ff980800e3.png)
+
+
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
 
