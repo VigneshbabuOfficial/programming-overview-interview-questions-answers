@@ -44,6 +44,73 @@ JavaScript Special Operators
 ```
 ![image](https://user-images.githubusercontent.com/70185865/147259489-c576a3bc-adc1-441c-a22e-891d5b0cb5c2.png)
 
+## JavaScript Loops
+```JS
+for loop
+while loop
+do-while loop
+for-in loop
+for-of loop
+```
+```JS
+If counters/indexes are needed while accessing an array or indexes related logical stuff are there it is better to go ahead with for loop.
+If there is a need to access properties/keys regardless of the order for-in will help.
+If you just need to iterate through data items of an iterable(also if you need to apply some changes maybe) for-of is an obvious choice.
+```
+
+## JavaScript break and continue with label
+```JS
+let i, j;
+
+loop1:
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
+   loop2:
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
+         continue loop1;
+      }
+      console.log('i = ' + i + ', j = ' + j);
+   }
+}
+
+
+OUTPUT:
+i = 0, j = 0
+i = 0, j = 1
+i = 0, j = 2
+i = 1, j = 0
+i = 2, j = 0
+i = 2, j = 1
+i = 2, j = 2
+```
+
+```JS
+let i, j;
+
+loop1:
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
+   loop2:
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
+         break loop1;
+      }
+      console.log('i = ' + i + ', j = ' + j);
+   }
+}
+
+OUTPUT:
+i = 0, j = 0
+i = 0, j = 1
+i = 0, j = 2
+i = 1, j = 0
+```
+
+## Object
+## Array
+
+
+
+
 
 
 
