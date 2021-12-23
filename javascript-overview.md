@@ -107,6 +107,10 @@ i = 1, j = 0
 
 ## Object
 ## Array
+## String
+## Class
+## Object
+## Exception Handling
 
 
 
