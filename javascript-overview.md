@@ -23,4 +23,34 @@
     typeof (3)            // Returns "number"
     ```
 
+## Operators
+```JS
+JavaScript Arithmetic Operators
+```
+![image](https://user-images.githubusercontent.com/70185865/147258890-7416e63e-c47e-4c00-98ae-55dc386d04db.png)
+
+```JS
+JavaScript Comparison Operators
+```
+![image](https://user-images.githubusercontent.com/70185865/147259145-55c99bc3-eadf-4795-9acc-83e949817ae9.png)
+
+```JS
+JavaScript Bitwise Operators & JavaScript Logical Operators
+```
+![image](https://user-images.githubusercontent.com/70185865/147259388-ab7bfeb4-10e0-4cb5-acee-08c1b5af0bee.png)
+
+```JS
+JavaScript Special Operators
+```
+![image](https://user-images.githubusercontent.com/70185865/147259489-c576a3bc-adc1-441c-a22e-891d5b0cb5c2.png)
+
+
+
+
+
+
+
+
+
+
 
