@@ -112,8 +112,21 @@ i = 1, j = 0
 ## Object
 ## Exception Handling
 
+# Interview Questions
 
+## What's the difference between event.stopPropagation and event.preventDefault?
+```JS
+stopPropagation prevents further propagation of the current event in the capturing and bubbling phases.
 
+preventDefault prevents the default action the browser makes on that event.
+```
+## What is the use of Void (0)?
+```JS
+Void(0) is used to prevent the page from refreshing, and parameter “zero” is passed while calling.
+
+Void(0) is used to call another method without refreshing the page.
+```
+https://www.youtube.com/watch?v=iccdL8-SF7c
 
 
 
