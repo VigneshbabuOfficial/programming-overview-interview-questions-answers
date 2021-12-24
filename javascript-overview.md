@@ -128,6 +128,9 @@ Void(0) is used to call another method without refreshing the page.
 ```
 https://www.youtube.com/watch?v=iccdL8-SF7c
 
+## What is the difference between call() and apply() methods ?
+## What is the difference between innerHTML & innerText ?
+## What is an event bubbling in JavaScript ?
 
 
 
