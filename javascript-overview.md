@@ -128,10 +128,99 @@ Void(0) is used to call another method without refreshing the page.
 ```
 https://www.youtube.com/watch?v=iccdL8-SF7c
 
-## What is the difference between call() and apply() methods ?
-## What is the difference between innerHTML & innerText ?
-## What is an event bubbling in JavaScript ?
+## What is the difference between call() and apply() and bind() methods ?
 
+### call method 
+```JS
+let printFullName = function() {
+    console.log(this.firstName+" "+this.lastName)
+}
+
+let name = {
+    firstName: "Vicky",
+    lastName: "Steve"
+}
+
+printFullName.call(name);
+
+O/P:
+Vicky Steve
+
+---------------------------------------------------------------------
+
+let printFullNameWithStateAndCountry = function(state,country) {
+    console.log(this.firstName+" "+this.lastName+" from "+state+" "+country)
+}
+
+let name = {
+    firstName: "Vicky",
+    lastName: "Steve"
+}
+
+printFullNameWithStateAndCountry.call(name,'Cupertino', "California");
+
+O/P :
+Vicky Steve from Cupertino California
+```
+### apply method
+```JS
+let printFullName = function() {
+    console.log(this.firstName+" "+this.lastName)
+}
+
+let name = {
+    firstName: "Vicky",
+    lastName: "Steve"
+}
+
+printFullName.apply(name);
+
+O/P:
+Vicky Steve
+
+----------------------------------------------------------------------
+
+let printFullNameWithStateAndCountry = function(state,country) {
+    console.log(this.firstName+" "+this.lastName+" from "+state+" "+country)
+}
+
+let name = {
+    firstName: "Vicky",
+    lastName: "Steve"
+}
+
+printFullNameWithStateAndCountry.apply(name,['Cupertino', "California"]);
+
+O/P:
+Vicky Steve from Cupertino California
+```
+### bind method - it's just similar to call method but it'll return a copy of function description not action done by that function. So, by storing into another variable a nd call it as function will return the outout of the invoked function.
+```JS
+let printFullNameWithStateAndCountry = function(state,country) {
+    console.log(this.firstName+" "+this.lastName+" from "+state+" "+country)
+}
+
+let name = {
+    firstName: "Vicky",
+    lastName: "Steve"
+}
+
+let printThis = printFullNameWithStateAndCountry.bind(name,'Cupertino', "California");
+printThis()
+
+O/P :
+Vicky Steve from Cupertino California
+```
+
+## What is the difference between innerHTML & innerText ?
+```JS
+innerText returns all text contained by an element and all its child elements. innerHtml returns all text, including html tags, that is contained by an element.
+```
+
+## What is an event bubbling in JavaScript ?
+```JS
+Event bubbling is a method of event propagation in the HTML. When an event is triggered in an element inside another element, and both elements have registered a handle to that event. In event bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+```
 
 
 
