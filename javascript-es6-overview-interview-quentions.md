@@ -1,3 +1,5 @@
+
+# OVERVIEW
 ## Variables
 | var | let | const |
 | --- | --- | --- |
@@ -112,6 +114,276 @@ i = 1, j = 0
 ## Object
 ## Exception Handling
 
+# ES6
+## var vs let vs const
+## DEFAULT PARAMETERS
+```JS
+function say(message='Hi') {
+    console.log(message);
+}
+
+say(); // 'Hi'
+say(undefined); // 'Hi'
+say('Hello'); // 'Hello'
+```
+## REST PARAMETERS
+```JS
+ES6 provides new kind of parameter so-called Rest Parameter that has a prefix of 3 dots   ( . . . )
+
+function fnc(a,b,...args) {
+  console.log(args)
+}
+fnc(1,2,3,'A','B','C'); // [3, "A", "B", "C"]
+fnc(1,2); // [ ]
+```
+## SPREAD OPERATOR
+```JS
+ES6 provides new operator called spread allows to concatenate values
+
+const oddArr = [1,2,3]
+const comArr = [ ...oddArr,2,4,6]
+console.log(comArr)  //  [1, 2, 3, 2, 4, 6]
+
+```
+## Objects Literal
+```JS
+var sharedType = {
+'all': '[none,allUsers,specificGroupOfUsers]',
+'none': 'none'
+}
+sharedType["all"]  // [none,allUsers,specificGroupOfUsers]
+
+```
+## DESTRUCTURING
+```JS
+OBJECT 
+------
+
+function getPerson() {
+    return null;
+}
+let {
+    firstName,
+    lastName
+} = getPerson();
+console.log(firstName, lastName);
+TypeError: Cannot destructure property 'firstName' of 'getPerson(...)' as it is null.
+let {
+    firstName,
+    lastName
+} = getPerson() || {};
+
+firstName // undefined
+lastName // undefined
+
+==============================================================
+
+const ratings = [
+    {user: 'John',score: 3},
+    {user: 'Jane',score: 4},
+    {user: 'David',score: 5},
+    {user: 'Peter',score: 2},
+];
+
+let sum = 0;
+for (const {score} of ratings) {
+    sum += score;
+}
+
+console.log(`Total scores: ${sum}`); // 14
+
+--------------------------------------------------------------------------------------------
+
+ARRAY DESTRUCTURING
+-------------------
+
+function getItems() {
+    return null;
+}
+let [a = 10, b = 20] = getItems() || [];
+console.log(a); // 10
+console.log(b); // 20
+
+```
+## map function
+```JS
+const colors = ['red', 'green', 'blue'];
+const items = colors.map(function(color){
+  return '<li>'+color+'</li>';
+});
+console.log(items);
+
+O/P:
+(3) ["<li>red</li>", "<li>green</li>", "<li>blue</li>"]
+0: "<li>red</li>"
+1: "<li>green</li>"
+2: "<li>blue</li>"
+```
+
+## Classes
+```JS
+class Person {
+  constructor(name){
+    this.name = name
+  }
+  walk() {
+    console.log(this.name+' is walking');
+  }
+}
+
+const person = new Person('Vignesh');
+const walkFn = person.walk();
+console.log(walkFn);
+
+O/P:
+VM113:6 Vignesh is walking
+
+```
+## Class Inheritance
+```JS
+class Person {
+  constructor(name){
+    this.name = name
+  }
+  walk() {
+    console.log(this.name+' is walking !!');
+  }
+}
+
+class Teacher extends Person{
+  constructor(name, degree){
+    super(name);
+    this.degree = degree;
+  }
+  teach(){
+    console.log(this.name+' is teaching degree '+this.degree);
+  }
+}
+
+const teacher = new Teacher('Vignesh', 'B.Tech');
+console.log(teacher.name);
+console.log(teacher.degree);
+console.log(teacher.teach());
+console.log(teacher.walk());
+
+
+O/P:
+Vignesh
+B.Tech
+Vignesh is teaching degree B.Tech
+Vignesh is walking !!
+
+```
+## Modules
+```JS
+
+person.js
+---------
+export class Person {
+    constructor(name){
+      this.name = name
+    }
+    walk() {
+      console.log(this.name+' is walking !!');
+    }
+  }
+=============================================  
+  
+teacher.js
+-----------
+import {Person} from './person';
+
+export class Teacher extends Person{
+    constructor(name, degree){
+      super(name);
+      this.degree = degree;
+    }
+    teach(){
+      console.log(this.name+' is teaching degree '+this.degree);
+    }
+  }
+================================================
+
+index.js
+--------
+
+import {Teacher} from './teacher';
+
+const teacher = new Teacher('Vignesh', 'Apple');
+console.log(teacher.name);
+console.log(teacher.degree);
+console.log(teacher.teach());
+console.log(teacher.walk());
+
+O/P:
+Vignesh
+B.Tech
+Vignesh is teaching degree B.Tech
+Vignesh is walking !!
+
+```
+## Named and Default Exports
+```JS
+Default -> import ... from '';
+Named -> import {...} from '';
+```
+## Arrow function
+## Map + Set + WeakMap + WeakSet
+```JS
+A WeakMap accepts only objects as keys whereas a Map,in addition to objects, accepts primitive datatype such as strings, numbers etc.
+```
+## TEMPLATE LITERALS/STRINGS:
+
+```JS
+
+Template literals also provides concatenation additionally text with some format.
+
+var a = 123, str = `---
+   a is: ${a}
+---`;
+console.log(str);
+
+O/P:
+---
+   a is: 123
+---
+
+```
+## Promises
+```JS
+let myPromise = new Promise((resolve,reject) => {
+
+let theDecider = true
+
+if(theDecider){ resolve('success') }
+else { reject('error') }
+
+
+}
+)
+
+
+myPromise.then(res => {
+
+console.log('res = ',res)
+})
+.catch(err => {
+console.log('error = ',err)
+
+})
+.finally(() => {
+    console.log('Experiment completed');
+  })
+
+
+O/P:
+res =  success
+Experiment completed
+
+```
+
+
+
 # Interview Questions
 
 ## What's the difference between event.stopPropagation and event.preventDefault?
@@ -194,8 +466,11 @@ printFullNameWithStateAndCountry.apply(name,['Cupertino', "California"]);
 O/P:
 Vicky Steve from Cupertino California
 ```
-### bind method - it's just similar to call method but it'll return a copy of function description not action done by that function. So, by storing into another variable a nd call it as function will return the outout of the invoked function.
+### bind method 
 ```JS
+it's just similar to call method but it'll return a copy of function description not action done by that function. So, by storing into another variable a nd call it as function will return the outout of the invoked function.
+
+
 let printFullNameWithStateAndCountry = function(state,country) {
     console.log(this.firstName+" "+this.lastName+" from "+state+" "+country)
 }
