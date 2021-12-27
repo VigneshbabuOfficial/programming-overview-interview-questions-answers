@@ -381,6 +381,80 @@ res =  success
 Experiment completed
 
 ```
+# ECMAScript 7(2016)
+## EXPONENTIATION OPERATOR (**):
+```JS
+2**5
+
+O/P:
+32
+```
+## INCLUDES(): 
+```JS
+
+let arr = ['a','b',2,3,true,false]
+arr.includes(true)
+true
+
+arr.includes(2)
+true
+
+arr.includes('a')
+true
+
+```
+# ES8 or ECMAScript 2017
+## PADSTART
+```JS
+
+let str = 'aaa'
+console.log(str.padStart(4,'#'))
+
+O/P:
+#aaa
+
+```
+## PADEND
+```JS
+
+let str = 'aaa'
+console.log(str.padEnd(4,'#'))
+
+O/P:
+aaa#
+
+```
+## JavaScript Async Functions
+```JS
+
+async function myDisplay() {
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("I love You !!"); }, 3000);
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
+## Object Entries
+```JS
+
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+let text = "";
+for ( let [fruit, value] of Object.entries( fruits ) ) {
+text += fruit + ": " + value + " ";
+}
+
+O/P:
+'Bananas: 300 Oranges: 200 Apples: 500 '
+
+```
+# ES9 or ECMAScript 2018
+
+
+
+# ECMAScript 2021
 
 
 
