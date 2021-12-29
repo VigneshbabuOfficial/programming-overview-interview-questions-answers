@@ -451,10 +451,182 @@ O/P:
 
 ```
 # ES9 or ECMAScript 2018
+## ASYNCHRONOUS ITERATION:
+```JS
 
+An async iterable object can be used as a loop iteration with the help of for-await-of.
 
+for await ( const str of 'vicky'){
+    console.log(' --- '+str);
+}
+```
+## Rest/Spread Properties
+https://2ality.com/2016/10/rest-spread-properties.html
 
 # ECMAScript 2021
+## string.replaceAll()
+```JS
+
+let string = "This is a JavaScript tutorial. JavaScript is used as a front-end & backend for making interactive & dynamic websites.";
+console.log(string.replaceAll("JavaScript", "ECMAScript"));
+
+O/P:
+This is a ECMAScript tutorial. ECMAScript is used as a front-end & backend for making interactive & dynamic websites.
+```
+## Logical Assignment operators
+### Logical assignment operators with logical AND (&&)
+```JS
+
+let a = 10;
+let b=4;
+a &&= b;
+console.log('a='+a)
+
+O/P:
+a=4
+
+-------------------
+
+let a;
+let b=4;
+a &&= b;
+console.log('a='+a)
+
+O/P:
+a=undefined
+```
+### Logical assignment operator with logical OR (||)
+### Logical assignment operator with Nullish Coalescing Operator (??)
+```JS
+
+let a;
+let b = 5;
+a ??= b;
+console.log('a='+a);
+
+O/P:
+a=5
+
+-----------------------------
+let a=null;
+let b = 5;
+a ??= b;
+console.log('a='+a);
+
+O/P:
+a=5
+```
+## Numeric Separators
+```JS
+
+let money = 1_000_000_000_000;
+console.log('Money='+money);
+
+O/P:
+Money=1000000000000
+```
+## Private class methods
+```JS
+
+class Person {
+  constructor(name, age){
+    this.name=name;
+    this.age=age;
+  }
+  showName() {
+    console.log(`My name is ${this.name}.`)
+  }
+  // private method
+  #showAge() {
+    console.log(`My age is ${this.age}.`)
+  }
+}
+const obj1 = new Person("Rohan Kesarwani",22);
+obj1.showName()
+obj1.showAge()
+
+O/P:
+Uncaught TypeError: obj1.showAge is not a function
+
+------------------------------------------------------------
+
+class Person {
+  constructor(name, age){
+    this.name=name;
+    this.age=age;
+  }
+  showName() {
+    console.log(`My name is ${this.name}.`)
+    this.#showAge();
+  }
+  // private method
+  #showAge() {
+    console.log(`My age is ${this.age}.`)
+  }
+}
+const obj1 = new Person("Rohan Kesarwani",22);
+obj1.showName()
+
+O/P:
+My name is Rohan Kesarwani.
+My age is 22.
+```
+## Private Getters and Setters:
+```JS
+
+Just like private methods, now we can make getters and setters so that they can only be accessed inside a class or by instance created.
+
+class GfG {
+  get #Name() {
+    return "GeeksforGeeks"
+  }
+  
+  get viewName() {
+    return this.#Name
+  }
+}
+
+let name = new GfG();
+console.log(name.viewName);
+
+O/P:
+GeeksforGeeks
+
+```
+## Promise.any() & Aggregate Error
+```JS
+
+It is similar to the Promise.All() method which waits for all promises provided to be resolved before it resolves. Promise.any() method returns a single promise that resolves if any of the promises provided in the iterable (such as an array) has been resolved. If all the promises were rejected, then the promise returned is rejected with a new error known as Aggregate error.
+
+let p1 = new Promise(function(resolve, reject){
+  setTimeout(function(){
+    reject();
+  }, 1000);
+});
+let p2 = new Promise(function(resolve, reject) {
+  setTimeout(function(){
+    reject();
+  }, 2000);
+});
+let p3 = new Promise(function(resolve, reject) {
+  setTimeout(function(){
+    reject();
+  }, 3000);
+});
+try {
+  let arr = await Promise.any([
+    p1, p2, p3
+  ]);
+} catch (error) {
+// If all promises were rejected, then we will be getting an Aggregate error.
+console.log(error);
+}
+
+O/P:
+AggregateError: All promises were rejected
+
+```
+
 
 
 
