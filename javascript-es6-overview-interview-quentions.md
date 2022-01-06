@@ -742,6 +742,19 @@ innerText returns all text contained by an element and all its child elements. i
 ```JS
 Event bubbling is a method of event propagation in the HTML. When an event is triggered in an element inside another element, and both elements have registered a handle to that event. In event bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
 ```
+## What is Javascript?
+```JS
+Javascript is a client-side language and the programs or codes written in Javascript run on a browser.  Using Javascript, it is possible to make a web page more intelligent, as it requires the user to provide all mandatory details before submitting the information (filled in HTML elements) to the server. Not only this, using Javascript, we can also restrict a web page to go back to the visited pages; e.g., security measure in net banking services.
+```
+## Are Attributes and Property the same?
+```JS
+No. Attributes are something that can give more details on an element like id, type, value etc. Whereas, Property is the value assigned to the property like type="text", value='Name' etc.
+
+* Attributes are additional information which we can put in the HTML to initialize certain DOM properties.
+
+* Properties are formed when the browser parses the HTML and generates the DOM. Each of the elements in the DOM have their own set of properties which are all set by the browser. Some of these properties can have their initial value set by HTML attributes. Whenever a DOM property changes which has influence on the rendered page, the page will be immediately re rendered
+```
+![image](https://user-images.githubusercontent.com/70185865/148322888-0b9966a9-28c5-45d6-9673-fcfc1ce5760a.png)
 
 
 
