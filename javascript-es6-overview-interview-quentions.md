@@ -756,6 +756,143 @@ No. Attributes are something that can give more details on an element like id, t
 ```
 ![image](https://user-images.githubusercontent.com/70185865/148322888-0b9966a9-28c5-45d6-9673-fcfc1ce5760a.png)
 
+## List out the different ways an HTML element can be accessed in a Javascript code.
+```JS
+(i) getElementById('idname'): Gets an element by its ID name
+
+(ii) getElementsByClass('classname'): Gets all the elements that have the given classname.
+
+(iii) getElementsByTagName('tagname'): Gets all the elements that have the given tag name.
+
+(iv) querySelector(): This function takes css style selector (like #id/.classname/tagname) and returns the first selected element.
+
+(v) querySelectorAll(): Similar to querySelector, this function returns a NodeList of html elements
+```
+## In how many ways a Javascript code can be involved in an HTML file?
+```JS
+There are 3 ways to include Javascript in HTML:
+
+External Javascript, load a Javascript file – <script src="FILE.JS"></script>
+```
+![image](https://user-images.githubusercontent.com/70185865/148480615-9b897f89-890d-413f-af22-2706b11e664c.png)
+
+```JS
+Internal Javascript, add a block of code in the HTML document itself – <script>DO SOMETHING</script>
+```
+![image](https://user-images.githubusercontent.com/70185865/148480720-27d512b4-5863-451d-bf8d-5ebdf461dced.png)
+```JS
+Inline Javascript, directly add Javascript to an HTML element – <input type="button" value="Test" onclick="FUNCTION()"/>
+```
+![image](https://user-images.githubusercontent.com/70185865/148480783-3d8cf165-cabd-4ade-ac79-3e9a01e286a8.png)
+
+## Number to String Conversion
+```JS
+toString: Other data type to String.
+val = (5).toString(); converts integer to string.
+val = (true).toString(); converts boolean to string.
+Convert from Number/Boolean/Date to String.
+Number to String: String(9) converts num to string
+Boolean to String: String(true) converts bool to str
+Date to String: String(new Date()) date to string
+Array to String: String([2,2,2]) Array to string.
+```
+## String to Number Conversion.
+```JS
+parseInt: String to Int only (no decimals)
+val = parseInt('11'); outputs 100 as number
+val = parseFloat('22.22') outputs 22.22 as float
+Convert from String/Boolean to Number/Date.
+String to Number: Number('9') converts str - num
+(9).toFixed(4) gives 9.0000 as the output
+Boolean to Number: Number(true) converts to no.
+Null to Number: Number(null) converts to no. (0)
+Chars to Number: Number('ss') give NaN.
+```
+## What is the difference between Local Storage and Session Storage?
+```JS
+Local Storage will stay until it is manually cleared through settings or program.
+
+Session Storage will leave when the browser is closed.
+```
+## What is the difference between null and undefined?
+```JS
+When used the typeof operator on null; i.e., typeof(null), the value is an object. Whereas, when used the typeof operator on undefined; i.e., typeof(undefined), the value would be undefined.
+```
+## What are anonymous functions in Javascript?
+```JS
+an anonymous function is that type of function that has no name
+
+anonymous functions can be used to store a bit of functionality in a variable and pass that piece of functionality around.
+
+Anonymous functions exist only after they are called; whereas, Named functions to exist even if not called.
+
+(function() {  
+    console.log('Hello');  
+})();  
+
+```
+## Explain the term closure.
+```JS
+The inner functions can be called as closure when it has access to the outer function's variables.
+```
+## Explain the terms synchronous and asynchronous code.
+```JS
+The synchronous code is one at a time, or in other words, the synchronous code is blocking. 
+And the Asynchronous code is execution is independent of any other actions, in other words, it is non-blocking.
+```
+## What is the difference between typeof and instanceof operators in Javascript?
+```JS
+typeof returns a type of entity that it's operated on. instanceof of returns true if an object is created from a given constructor and false otherwise.
+```
+## What is the difference between textContent and innerText and innerHTML ?
+```JS
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+
+function callThis(){
+console.log('text-cont - '+document.querySelector('p').textContent); 
+console.log('inner-text - '+document.querySelector('p').innerText);
+console.log('innerHTML - '+document.querySelector('p').innerHTML);
+}
+</script>
+</head>
+<body>
+<p>some text and a <span style="visibility: hidden">span tag hidden </span>in it</p>
+
+<h1 onclick="callThis()">This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+O/P:
+text-cont - some text and a span tag hidden in it
+inner-text - some text and a in it
+innerHTML - some text and a <span style="visibility: hidden">span tag hidden </span>in it
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
