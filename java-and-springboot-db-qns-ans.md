@@ -662,6 +662,35 @@ ________________________________________________________________________________
 
 # Collections Interview Questions and Answers
 
+## What is Collection?
+```JS
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+```
+![image](https://user-images.githubusercontent.com/70185865/149058901-ce95e647-676b-4a19-9c9e-1d5dc209c12e.png)
+
+## ArrayList
+```JS
+The ArrayList class implements the List interface. 
+It uses a dynamic array to store the duplicate element of different data types. 
+The ArrayList class maintains the insertion order and is non-synchronized. 
+The elements stored in the ArrayList class can be randomly accessed.
+Allows null values.
+```
+
+## LinkedList
+```JS
+Implements List and Queue
+It uses a doubly linked list internally to store the elements. 
+It can store duplicate elements. 
+It maintains the insertion order and is not synchronized.
+Allows null values
+```
+## ArrayList Vs LinkedList
+![image](https://user-images.githubusercontent.com/70185865/149060098-5914b8ac-f6fd-4a71-b046-0cbdaf8f272a.png)
+
+
+
+
 ## Hashmap vs hashtable
 
 ## ArrayList vs Arrays.asList
