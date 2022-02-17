@@ -656,6 +656,122 @@ public class HttpClientExample {
 
 ```
 
+## Optional Hands on 
+
+```JS
+This type of execution mostly usedin API side. the value will be retrieved and update if value is present in payload otherwise not.
+```
+
+### Fields declaration
+
+```JS
+private String				testField1;
+private Optional<String>	testField2;
+private Boolean				testFieldBool1;
+private Optional<Boolean>	testFieldBool2;
+
+
+public String getTestField1() {
+
+	return testField1;
+}
+
+
+public void setTestField1( String testField1 ) {
+
+	this.testField1 = testField1;
+}
+
+
+public Optional<String> getTestField2() {
+
+	return testField2;
+}
+
+
+public void setTestField2( Optional<String> testField2 ) {
+
+	this.testField2 = testField2;
+}
+
+
+public Boolean getTestFieldBool1() {
+
+	return testFieldBool1;
+}
+
+
+public void setTestFieldBool1( Boolean testFieldBool1 ) {
+
+	this.testFieldBool1 = testFieldBool1;
+}
+
+
+public Optional<Boolean> getTestFieldBool2() {
+
+	return testFieldBool2;
+}
+
+
+public void setTestFieldBool2( Optional<Boolean> testFieldBool2 ) {
+
+	this.testFieldBool2 = testFieldBool2;
+}
+```
+
+------------------------------------------
+
+### PAYLOAD
+
+```JS
+{
+    "testField1":"testField1",
+    "testField2":"testField1",
+    "testFieldBool1":false,
+    "testFieldBool2":true  
+}
+
+```
+
+------------------------------------------------
+
+### CODE SNIPPET
+
+```JS
+System.out.println( " userDTO.getTestField1()  = " + userDTO.getTestField1() );
+System.out.println( " userDTO.getTestField2() = " + userDTO.getTestField2() );
+System.out.println( " Optional.ofNullable( userDTO.getTestField2() ).isPresent() = " + Optional.ofNullable( userDTO.getTestField2() ).isPresent() );
+System.out.println( " userDTO.getTestField2().isPresent() = " + userDTO.getTestField2().isPresent() );
+System.out.println( " userDTO.getTestField2().get() = " + userDTO.getTestField2().get() );
+System.out.println( " userDTO.isTestFieldBool1() = " + userDTO.getTestFieldBool1() );
+System.out.println( " Optional.ofNullable( userDTO.getTestFieldBool2() ).isPresent() = " + Optional.ofNullable( userDTO.getTestFieldBool2() ).isPresent() );
+System.out.println( " userDTO.getTestFieldBool2().isPresent() = " + userDTO.getTestFieldBool2().isPresent() );
+System.out.println( " userDTO.getTestFieldBool2().get() = " + userDTO.getTestFieldBool2().get() );
+```
+
+------------------------------------------
+
+### OUTPUT
+
+```JS
+userDTO.getTestField1()  = testField1
+
+userDTO.getTestField2() = Optional[testField1]
+
+Optional.ofNullable( userDTO.getTestField2() ).isPresent() = true
+
+userDTO.getTestField2().isPresent() = true
+
+userDTO.getTestField2().get() = testField1
+
+userDTO.isTestFieldBool1() = false
+
+Optional.ofNullable( userDTO.getTestFieldBool2() ).isPresent() = true
+
+userDTO.getTestFieldBool2().isPresent() = true
+
+userDTO.getTestFieldBool2().get() = true
+```
 
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
