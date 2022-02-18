@@ -36,7 +36,48 @@ Syntax:=
                                                           <<identifier_name>>
                                                                               =  <<value>>
 ```
+## Variable Types
+```JS
+Local - Declared inside the body of the method
+Instance - Declared inside the class and outside the method
+Static - Same as instance variable but the memory allocation is happened only once when the class is loaded in memory
+```
+### Static
+```JS
+It can be used for blocks, variables, methods and classes
 
+When a member is created as static, the memory allocation happens only once when the class is loaded.
+
+When a member is declared as static, it can be accessed without any object reference.
+```
+```diff
+- NOTE: Object reference is needed if we try to access the non-static members from static method. (E.g) main method.
+```
+```JS
+package basics;
+
+public class Practice {
+	public static void main(String[] args) {
+		Testing.m1();
+		Testing t = new Testing();
+		t.m1();
+	}
+}
+
+class Testing {
+	static void m1() {
+		System.out.println("Testing - m1()");
+	}
+}
+
+--------------
+
+output:=
+
+Testing - m1()
+Testing - m1()
+
+```
 
 
 
