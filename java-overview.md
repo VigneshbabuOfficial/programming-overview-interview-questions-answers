@@ -96,7 +96,7 @@ protected - Variables, methods, and constructors, which are declared protected i
 
 ### Non-Access Modifier
 #### static
-[static](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/edit/main/java-overview.md#static)
+[static](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-overview.md#static)
 
 #### final
 ```JAVA
