@@ -75,5 +75,42 @@ Testing - m1()
 
 ```
 
+### JAVA CODE EXECUTION
+
+![image](https://user-images.githubusercontent.com/70185865/158194434-26bc695d-dcf4-4069-8156-d96e1aa38751.png)
+
+### Access Specifier
+
+| Access Type | Within class | Within Package | Outside the package by subclass | Outside the package |
+| --- | --- | --- | --- | --- |
+| private | :heavy_check_mark: | :wavy_dash: | :wavy_dash: | :wavy_dash: |
+| default | :heavy_check_mark: | :heavy_check_mark: | :wavy_dash: | :wavy_dash: |
+| protected | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :wavy_dash: |
+| public | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+```JAVA
+default -  If access type is not specified
+
+protected - Variables, methods, and constructors, which are declared protected in a superclass can be accessed only by the subclasses in other package or any class within the package of the protected members' class. The protected access modifier cannot be applied to class and interfaces
+```
+
+### Non-Access Modifier
+#### static
+[static](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/edit/main/java-overview.md#static)
+
+#### final
+```JAVA
+final variable -> to create constant variable
+final methods  -> to prevent method overriding
+final class    -> to prevent inheritance
+````
+```JAVA
+we can initialize / decalare a final variable but it should be defined inside a block.
+
+static variable into static block
+non-static variable into noon-static block
+but we can't initialize inside the main and other methods
+```
 
 
+	
