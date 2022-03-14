@@ -278,4 +278,19 @@ Deserialization completed :
  objFromFile.transInt = 0
 
 ```
-	
+
+
+#### Synchronized
+```
+Synchronization is the process of controlling the accessibility of any shared resource by multiple threads.
+So, the particular resource can be accessed by only one thread at a time.
+This can be used for methods.
+```
+
+#### Volatile
+```JS
+It is used to mark the variable as being stored in main memory.
+It is used modify the value of variable by different thread.
+```
+
+#### Native
