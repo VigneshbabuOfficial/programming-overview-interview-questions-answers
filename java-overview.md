@@ -1,7 +1,3 @@
-```JS
-
-```
-
 
 ## What is Java?
 ```JS
