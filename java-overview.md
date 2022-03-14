@@ -294,3 +294,22 @@ It is used modify the value of variable by different thread.
 ```
 
 #### Native
+
+## Datatype
+
+### Primitive 
+![image](https://user-images.githubusercontent.com/70185865/158251081-ad8f8ed2-158a-4a99-b8b1-e8a0495513c6.png)
+
+#### Unicode System
+`Unicode is a universal international standard character encoding`
+
+### Non-Primitive
+Classes, Interfaces, String, Array, Object
+
+## Operators
+![image](https://user-images.githubusercontent.com/70185865/158251974-9117b415-26a5-4777-aa56-ab1dbffa1f58.png)
+
+
+
+
+
