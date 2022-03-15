@@ -309,6 +309,10 @@ Classes, Interfaces, String, Array, Object
 ## Operators
 ![image](https://user-images.githubusercontent.com/70185865/158251974-9117b415-26a5-4777-aa56-ab1dbffa1f58.png)
 
+### Operators example
+
+https://github.com/VigneshOfficial2020/java-tutorial/commit/52d74b1c2d12e826898a37d6e0ae6102e41592b3
+
 ```JAVA
 package basics;
 
