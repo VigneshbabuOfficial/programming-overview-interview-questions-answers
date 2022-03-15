@@ -383,6 +383,246 @@ OUTPUT:
 
 ```
 
+## Inheritance
+```JS
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object.
+```
+
+### Types of Inheritance
+
+![image](https://user-images.githubusercontent.com/70185865/158423481-00057ea6-f27e-4852-93f2-e416c91ab656.png)
+
+![image](https://user-images.githubusercontent.com/70185865/158423574-d6f6628f-e5b2-4011-8cf6-b28199323abc.png)
 
 
+#### Single Inheritance Example
+
+![image](https://user-images.githubusercontent.com/70185865/158428856-aa8af783-7fb3-4ee3-96c6-d64a52b2e75c.png)
+
+```JS
+
+package basics;
+
+class ParentClass {
+
+	void parentClassMethod() {
+		System.out.println("ParentClass - parentClassMethod");
+	}
+}
+
+public class SingleInheritanceExample extends ParentClass {
+	
+	
+	void parentClassMethod1() {
+		
+		super.parentClassMethod();
+		System.out.println("SingleInheritanceExample - parentClassMethod");
+	}
+
+	public static void main(String[] args) {
+
+		SingleInheritanceExample si = new SingleInheritanceExample();
+		
+		si.parentClassMethod1();
+		
+		
+	}
+
+}
+
+
+OUTPUT:
+ParentClass - parentClassMethod
+SingleInheritanceExample - parentClassMethod
+
+```
+
+#### Multilevel Inheritance Example
+
+![image](https://user-images.githubusercontent.com/70185865/158428944-53e3b7cf-d76c-4bef-9d33-509d7d195586.png)
+
+```JS
+package basics;
+
+class MLParentClass {
+
+	void parentClassMethod() {
+		System.out.println("MLParentClass - parentClassMethod");
+	}
+}
+
+class MLParentClass1 extends MLParentClass {
+
+	void parentClassMethod1() {
+		super.parentClassMethod();
+		System.out.println("MLParentClass1 - parentClassMethod1");
+	}
+}
+
+class MLParentClass2 extends MLParentClass1 {
+	
+	void parentClassMethod2() {
+		super.parentClassMethod1();
+		System.out.println("MLParentClass2 - parentClassMethod2");
+	}
+}
+
+public class MultilevelInheritanceExample{
+
+	public static void main(String[] args) {
+		
+		MLParentClass2 mlp = new MLParentClass2();
+
+		mlp.parentClassMethod2();
+
+	}
+
+}
+
+
+OUTPUT:
+MLParentClass - parentClassMethod
+MLParentClass1 - parentClassMethod1
+MLParentClass2 - parentClassMethod2
+
+
+```
+
+#### Hierarchial Inheritance
+
+![image](https://user-images.githubusercontent.com/70185865/158430008-e821e58f-5b5d-438c-81dd-c7a9217a9965.png)
+
+```JS
+package basics;
+
+class HIParentClass {
+
+	void parentClassMethod() {
+		System.out.println("HIParentClass - parentClassMethod");
+	}
+}
+
+class HIParentClass1 extends HIParentClass {
+
+	void parentClassMethod1() {
+		super.parentClassMethod();
+		System.out.println("HIParentClass1 - parentClassMethod1");
+	}
+}
+
+class HIParentClass2 extends HIParentClass {
+	
+	void parentClassMethod2() {
+		super.parentClassMethod();
+		System.out.println("HIParentClass2 - parentClassMethod2");
+	}
+}
+
+public class HierarchialInheritanceExample{
+
+	public static void main(String[] args) {
+		
+		HIParentClass1 hip1 = new HIParentClass1();
+
+		hip1.parentClassMethod1();
+		
+		System.out.println("-----------------------------");
+		
+		HIParentClass2 hip2 = new HIParentClass2();
+
+		hip2.parentClassMethod2();
+
+	}
+
+}
+
+OUTPUT:
+HIParentClass - parentClassMethod
+HIParentClass1 - parentClassMethod1
+-----------------------------
+HIParentClass - parentClassMethod
+HIParentClass2 - parentClassMethod2
+
+```
+
+#### Multiple Inheritance Example
+
+
+```JS
+multiple and hybrid inheritance is supported through interface only. 
+
+When one class inherits multiple classes, it is known as multiple inheritance.
+```
+
+##### Why multiple inheritance is not supported in java?
+```JS
+Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from child class object, there will be ambiguity to call the method of A or B class.
+
+So because of Ambiguity.
+```
+
+![image](https://user-images.githubusercontent.com/70185865/158431499-d5a307d4-36d9-4b66-81c0-9718bf8dcab4.png)
+
+```JS
+
+package basics;
+
+
+interface MInterface {
+	
+	default void interfaceMethod() {
+		System.out.println("MInterface - interfaceMethod");
+	};
+}
+
+interface MInterface1 {
+	
+	default void interfaceMethod1() {
+		System.out.println("MInterface1 - interfaceMethod1");
+	};
+}
+
+// multiple inheritance achieved here
+interface MInterface2 extends MInterface,MInterface1 {
+	
+	public default void interfaceMethod2() {
+		interfaceMethod();
+		interfaceMethod1();
+	};
+}
+
+class MInterfaceClass  implements MInterface2{
+	
+	void mInterfaceClassMethod() {
+		interfaceMethod2();
+		System.out.println("MInterfaceClass - mInterfaceClassMethod");
+	}
+	
+}
+
+
+public class MultipleInheritanceExample{
+	
+	public static void main(String[] args) {
+		
+		MInterfaceClass ml = new MInterfaceClass();
+		ml.mInterfaceClassMethod();
+		System.out.println("MultipleInheritanceExample - main");
+		
+	}
+	
+}
+
+
+OUTPUT :
+MInterface - interfaceMethod
+MInterface1 - interfaceMethod1
+MInterfaceClass - mInterfaceClassMethod
+MultipleInheritanceExample - main
+
+```
+
+#### Hybrid Inheritance
+
+![image](https://user-images.githubusercontent.com/70185865/158437999-9874b14c-b0ef-4291-a6fd-6cedcdbb3ca3.png)
 
