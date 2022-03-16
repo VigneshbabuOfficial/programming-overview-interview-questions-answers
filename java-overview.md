@@ -686,4 +686,5 @@ The final method is not allowed to define inside the interface.
 
 ## STRING
 
+[STRING](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#explain-string-constant-pool)
 
