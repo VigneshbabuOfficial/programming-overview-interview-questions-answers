@@ -688,3 +688,4 @@ The final method is not allowed to define inside the interface.
 
 [STRING](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#explain-string-constant-pool)
 
+![image](https://user-images.githubusercontent.com/70185865/158517984-2fe441c7-2999-4fa6-8807-1d957675828f.png)
