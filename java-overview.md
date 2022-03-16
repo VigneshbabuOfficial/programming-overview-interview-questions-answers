@@ -684,6 +684,10 @@ We can have default methods but the method body should be written and it’s not
 The final method is not allowed to define inside the interface.
 ```
 
+### Difference between abstract class and interface
+![image](https://user-images.githubusercontent.com/70185865/158518363-4b680319-aba5-46a0-a2c4-24ef50f0a496.png)
+
+
 ## STRING
 
 [STRING](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#explain-string-constant-pool)
