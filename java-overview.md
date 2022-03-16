@@ -626,3 +626,64 @@ MultipleInheritanceExample - main
 
 ![image](https://user-images.githubusercontent.com/70185865/158437999-9874b14c-b0ef-4291-a6fd-6cedcdbb3ca3.png)
 
+
+## Polymorphism
+```JS
+If one task is performed in different ways, it is known as polymorphism. 
+In Java, we use method overloading and method overriding to achieve polymorphism.
+```
+
+### Method Overloading
+```JS
+By changing the no. of arguments.
+By changing the data type of the arguments.
+```
+### Why Method overloading is not possible by changing the return type of method?
+`Because of ambiguity.`
+### Can we overload java main() method?
+```JS
+The main method can be overloaded but JVM will execute first the method with String args.
+```
+
+### Method Overriding
+```JS
+If a subclass has the same method as declared in the parent class is known as Method Overriding.
+The overridden method must have the same name, return type, no. of args and data type of args
+```
+### Can we override the static method?
+```JS
+No, a static method cannot be overridden.
+Static belongs to the class area, and an instance belongs to the heap area.
+```
+### Can we override java main method?
+```JS
+No, because the main is a static method.
+```
+
+## Abstraction
+```JS
+Hiding internal details and showing functionality is known as abstraction.
+In Java, we use abstract class and interface to achieve abstraction.
+
+```
+### Abstract Class
+```JS
+Must be declared with abstract keyword.
+An object can’t be created for this so it should be extended.
+It can have both abstract and non-abstract methods.
+The abstract method must be overridden in sub-class and non-abstract methods are not required to override.
+Non-abstract methods must have a method body.
+```
+
+### Interface
+```JS
+It’s a blueprint of a class.
+Interface fields are “public static final” by default.
+Interface methods are “public abstract” by default.
+We can have default methods but the method body should be written and it’s not required to override.
+The final method is not allowed to define inside the interface.
+```
+
+## STRING
+
+
