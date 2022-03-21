@@ -472,10 +472,13 @@ Example: In DTO fields we can enable the validation for the specific fields by u
 ## Java8, Java 11 & Java 16 features
 
 ### JAVA 8 FEATURES
+
+Reference:
+
 	
 #### Lambda Expression
 `
-A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 		they can be implemented right in the body of a method.
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 	they can be implemented right in the body of a method.
 `
 #### Method Reference
 `
@@ -527,11 +530,26 @@ MRInterface - cccc -
 ```
 
 #### Functional interfaces
+[what-is-functional-interface-in-java](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#what-is-functional-interface-in-java)
+
 #### Stream API
+`
+Java provides a new additional package in Java 8 called java.util.stream. This package consists of classes, interfaces and enum to allows functional-style operations on the elements. 
+`
+
 #### Default methods
+[interface-default-methods](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#explain-interface-default-methods)
+
 #### Static methods in interface
+
 #### Optional class
+[optional class](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#optional-hands-on)
+
 #### Collectors class
+`
+Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria 
+`
+
 #### ForEach() method
 
 ## Java 11 features
