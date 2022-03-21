@@ -474,6 +474,48 @@ Example: In DTO fields we can enable the validation for the specific fields by u
 ### JAVA 8 FEATURES
 
 Reference:
+```JAVA
+package basics;
+
+interface Sayable{  
+    public String say();  
+} 
+
+interface Sayable1{  
+    public void say1();  
+} 
+
+public class Java8Features {
+	
+	
+	public static void saySomething(){  
+        System.out.println( "This is an example for Method Reference");  
+    }  
+
+	public static void main(String[] args) {
+
+		// Lambda expressions
+		Sayable s=()->{  
+	        return "This is an example for Lambda expressions";  
+	    };  
+	    System.out.println(s.say());  
+	    
+	    
+	    // Method Reference
+	    Sayable1 sayable = Java8Features::saySomething;  
+        // Calling interface method  
+        sayable.say1();  
+		
+	}
+
+}
+
+
+OUTPUT:
+This is an example for Lambda expressions
+This is an example for Method Reference
+
+```
 
 	
 #### Lambda Expression
