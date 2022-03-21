@@ -711,12 +711,10 @@ The final method is not allowed to define inside the interface.
 ## JAVA 16 FEATURES
 [java-16-features](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#java-16-features)
 
-## INTERVIEW QUESTIONS
-## TRICKY INTERVIEW QUESTIONS
-
 ## Java programs for Practice
 https://www.javatpoint.com/java-programs
 
 
-
+## Java Interview Questions
+[java-interview-questions--answers](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#java-interview-questions--answers)
 
