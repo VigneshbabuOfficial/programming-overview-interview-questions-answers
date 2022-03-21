@@ -598,6 +598,26 @@ Collectors is a final class that extends Object class. It provides reduction ope
 
 #### Running Java File with single command - java Classname, means we dont need to compile using javac.
 #### Java String Methods - .isBlank(), .lines(), strip(), stripLeading(), stripTrailing()
+#### Collection to an Array
+```JAVA
+List sampleList = Arrays.asList("Java", "Kotlin");
+String[] sampleArray = sampleList.toArray(String[]::new);
+```
+#### Not Predicate Method
+```JAVA
+List<String> sampleList = Arrays.asList("Java", "\n \n", "Kotlin", " ");
+List withoutBlanks = sampleList.stream()
+  .filter(Predicate.not(String::isBlank))
+  .collect(Collectors.toList());
+```
+#### Local-Variable Syntax for Lambda
+```JAVA
+List<String> sampleList = Arrays.asList("Java", "Kotlin");
+String resultString = sampleList.stream()
+  .map((@Nonnull var x) -> x.toUpperCase())
+  .collect(Collectors.joining(", "));
+```
+
 #### Nested Based Access Control
 ```
 public class Main {
