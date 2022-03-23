@@ -702,6 +702,91 @@ The final method is not allowed to define inside the interface.
 [Exception Handling](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#exceptions)
 
 ## Multithreads
+```JS
+
+Thread is a lightweight sub-process.
+They are independent and if there are any exceptions that occur in one thread, it doesn’t affect other threads.
+```
+### By extends with Thread Class
+```JAVA
+package basics;
+
+public class MultithreadExample extends Thread {
+
+	@Override
+	public void run() {
+		super.run();
+		System.out.println("Thread run method");
+	}
+
+	public static void main(String[] args) {
+
+		MultithreadExample t = new MultithreadExample();
+		t.start();
+	}
+
+}
+```
+### By implements with Runnable Interface
+```JAVA
+package basics.multithread;
+
+public class MultithreadExample1 implements Runnable {
+
+	@Override
+	public void run() {
+		System.out.println("Runnable run method");
+	}
+
+	public static void main(String[] args) {
+
+		MultithreadExample1 t1 = new MultithreadExample1();
+		Thread th = new Thread(t1);
+		th.start();
+	}
+
+}
+
+```
+### Difference between Thread and Runnable in Java
+| Thread | Runnable |
+| --- | --- |
+| Each thread has to create unique objects | Multiple threads can share same object |
+| Needs more memory | Needs less memory |
+| Java not supporting for Multiple inheritance of Class. So, a class can't be extended any more if a class extends with thread class | If a class is implementing the runnable interface then your class can extend another class. |
+
+### Life Cycle
+#### [ New ](#new)
+#### [ Running / Runnable ](#running--runnable)
+#### [ Blocked / Waiting ](#blocked--waiting)
+#### [ Timed Waiting ](#timed-waiting)
+#### [ Terminated ](#terminated)
+
+#### New
+```JS
+Whenever a new thread is created, it is always in the new state.
+``` 
+#### Running / Runnable
+```JS
+A thread, that is ready to run is then moved to the runnable state. In the runnable state, the thread may be running or may be ready to run at any given instant of time. 
+```
+#### Blocked / Waiting
+```JS
+Whenever a thread is inactive for a span of time (not permanently) then, either the thread is in the blocked state or is in the waiting state.
+```
+#### Timed Waiting
+```JS
+Sometimes, waiting for leads to starvation. For example, a thread (its name is A) has entered the critical section of a code and is not willing to leave that critical section. In such a scenario, another thread (its name is B) has to wait forever, which leads to starvation. To avoid such scenario, a timed waiting state is given to thread B. Thus, thread lies in the waiting state for a specific span of time, and not forever. A real example of timed waiting is when we invoke the sleep() method on a specific thread. The sleep() method puts the thread in the timed wait state. After the time runs out, the thread wakes up and start its execution from when it has left earlier.
+```
+#### Terminated
+```JS
+A thread reaches the termination state because of the following reasons:
+
+When a thread has finished its job, then it exists or terminates normally.
+Abnormal termination: It occurs when some unusual events such as an unhandled exception or segmentation fault.
+```
+
+
 
 ## Java Collection
 
