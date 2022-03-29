@@ -759,6 +759,7 @@ public class MultithreadExample1 implements Runnable {
 | Each thread has to create unique objects | Multiple threads can share same object |
 | Needs more memory | Needs less memory |
 | Java not supporting for Multiple inheritance of Class. So, a class can't be extended any more if a class extends with thread class | If a class is implementing the runnable interface then your class can extend another class. |
+| [Thread Example](https://github.com/VigneshbabuOfficial/java-tutorial/blob/master/src/basics/multithread/MultithreadExample.java) | [Runnable Interface Example](https://github.com/VigneshbabuOfficial/java-tutorial/blob/master/src/basics/multithread/MultithreadExample1.java) |
 
 ### Life Cycle
 #### [ New ](#new)
