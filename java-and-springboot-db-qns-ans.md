@@ -1388,8 +1388,33 @@ COMMIT;
 
 ```
 
+## HTTP STATUS CODES
+### Information responses
+#### 100
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+100 Continue,  indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished. 
+```
+</details>
 
+#### 101
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+101 Switching Protocols,indicates a protocol to which the server switches. The protocol is specified in the Upgrade request header received from a client. 
+```
+</details>
 
-
+#### 102
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+102 Processing, indicates that the server has received and is processing the request, but no response is available yet.
+```
+</details>
 
 	
