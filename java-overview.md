@@ -791,7 +791,30 @@ A thread reaches the termination state because of the following reasons:
 When a thread has finished its job, then it exists or terminates normally.
 Abnormal termination: It occurs when some unusual events such as an unhandled exception or segmentation fault.
 ```
+### Thread Methods
+![image](https://user-images.githubusercontent.com/70185865/160745674-f919b316-bede-4cb0-9c48-5a2d3584f669.png)
+![image](https://user-images.githubusercontent.com/70185865/160745733-964e2796-ef3b-47db-b422-72bb9889e7d6.png)
+![image](https://user-images.githubusercontent.com/70185865/160745794-f993d8d2-d0db-4846-8d67-aa3c2ba60438.png)
 
+### Java Thread Pool
+<details>
+<summary>:bulb:</summary>
+
+```JS
+A group of fixed-size threads is created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job, the thread is contained in the thread pool again.
+	
+```
+</details>
+
+### Synchronization in Java
+<details>
+<summary>:bulb:</summary>	
+
+```JS
+Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+```
+</details>
 
 
 ## Java Collection
