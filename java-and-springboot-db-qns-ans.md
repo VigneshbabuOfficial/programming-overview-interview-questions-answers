@@ -856,6 +856,68 @@ userDTO.getTestFieldBool2().get() = true
 ```
 
 ____________________________________________________________________________________________
+
+# Multithread Qns
+
+## What if we call Java run() method directly instead start() method?
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+    class TestCallRun2 extends Thread{  
+     public void run(){  
+      for(int i=1;i<5;i++){  
+        try{Thread.sleep(500);}catch(InterruptedException e){System.out.println(e);}  
+        System.out.println(i);  
+      }  
+     }  
+     public static void main(String args[]){  
+      TestCallRun2 t1=new TestCallRun2();  
+      TestCallRun2 t2=new TestCallRun2();  
+       
+      t1.run();  
+      t2.run();  
+     }  
+    }  
+
+OUTPUT:
+1
+2
+3
+4
+1
+2
+3
+4
+			    
+As we can see in the above program that there is no context-switching because here t1 and t2 will be treated as normal object not thread object.
+```
+			    
+</details>
+
+## Can we start a thread twice?
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+No. After starting a thread, it can never be started again. If you does so, an IllegalThreadStateException is thrown. In such case, thread will run once but for second time, it will throw exception.
+	
+```
+			    
+</details>
+
+## Dead Lock?
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+It’s a situation where a thread is waiting for an object lock that is acquired by another thread and 2nd thread is also waiting for an object lock that is acquired by another thread. So process execution stops since both threads are waiting for each other.
+To Avoid : 
+Avoid nested locks.
+Use the join method.
+```
+</details>
+
 ____________________________________________________________________________________________
 
 # Collections Interview Questions and Answers
