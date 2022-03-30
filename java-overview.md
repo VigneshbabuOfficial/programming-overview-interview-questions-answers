@@ -816,6 +816,13 @@ Java Synchronization is better option where we want to allow only one thread to 
 ```
 </details>
 
+### Thread Interview Qns
+[multithread qns](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#multithread-qns)
+
+### Thread reference
+https://github.com/VigneshbabuOfficial/java-tutorial/commit/8db110840a2df90312a57be6a0ab54fe45e56c82
+https://github.com/VigneshbabuOfficial/java-tutorial/commit/4c838565b6e7a25dce5c4c193fca0bcfaae89fb5
+
 
 ## Java Collection
 
