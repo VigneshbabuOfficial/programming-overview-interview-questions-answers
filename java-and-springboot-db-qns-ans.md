@@ -1460,7 +1460,6 @@ COMMIT;
 100 Continue,  indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished. 
 ```
 </details>
-
 #### 101
 <details>
 <summary>:bulb:</summary>
@@ -1469,7 +1468,6 @@ COMMIT;
 101 Switching Protocols,indicates a protocol to which the server switches. The protocol is specified in the Upgrade request header received from a client. 
 ```
 </details>
-
 #### 102
 <details>
 <summary>:bulb:</summary>
@@ -1479,4 +1477,41 @@ COMMIT;
 ```
 </details>
 
+### Successful responses
+#### 200	
+<details>
+<summary>:bulb:</summary>
 	
+```JS
+200 OK    The request succeeded. 
+```
+</details>
+	
+#### 201
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+201 Created, The request succeeded, and a new resource was created as a result. This is typically the response sent after POST requests, or some PUT requests.
+```
+</details>
+	
+#### 202
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+202 Accepted, The request has been received but not yet acted upon. It is intended for cases where another process or server handles the request, or for batch processing. 
+```
+</details>	
+	
+#### [203](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203)
+	
+#### 204
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+204 No Content. There is no content to send for this request, but the headers may be useful. 
+```
+</details>
