@@ -830,6 +830,28 @@ The Collection is a framework that provides an architecture to store and manipul
 ```
 ![image](https://user-images.githubusercontent.com/70185865/161088751-4866eac1-73ae-442b-99e9-2bf6c59c4d66.png)
 
+### List Interface
+#### [ArrayList](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#arraylist)
+#### [LinkedList](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#linkedlist)
+#### [ArrayList Vs LinkedList](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#arraylist-vs-linkedlist)
+#### Vector
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Vector uses a dynamic array to store the data elements.  
+It is similar to ArrayList. However, It is synchronized.	
+```
+</details>
+
+#### Stack
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.	
+```
+</details>
 
 
 
