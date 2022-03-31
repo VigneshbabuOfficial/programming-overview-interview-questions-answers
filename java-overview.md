@@ -825,6 +825,16 @@ https://github.com/VigneshbabuOfficial/java-tutorial/commit/4c838565b6e7a25dce5c
 
 
 ## Java Collection
+```JS
+The Collection is a framework that provides an architecture to store and manipulate the group of objects.
+```
+![image](https://user-images.githubusercontent.com/70185865/161088751-4866eac1-73ae-442b-99e9-2bf6c59c4d66.png)
+
+
+
+
+
+
 
 ## JAVA 8 FEATURES
 [java-8-features](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#java-8-features)
