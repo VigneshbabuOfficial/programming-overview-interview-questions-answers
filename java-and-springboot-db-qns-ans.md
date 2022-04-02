@@ -930,20 +930,24 @@ The Collection in Java is a framework that provides an architecture to store and
 
 ## ArrayList
 ```JS
-The ArrayList class implements the List interface. 
-It uses a dynamic array to store the duplicate element of different data types. 
-The ArrayList class maintains the insertion order and is non-synchronized. 
-The elements stored in the ArrayList class can be randomly accessed.
+Implements List interface. 
+Uses a dynamic array internally to store the elements. 
+Allows duplicate element of different data types. 
 Allows null values.
+Maintains the insertion order.
+Non-Synchronized. 
+Best for accessing randomly.
 ```
 
 ## LinkedList
 ```JS
-Implements List and Queue
-It uses a doubly linked list internally to store the elements. 
-It can store duplicate elements. 
-It maintains the insertion order and is not synchronized.
-Allows null values
+Implements List and Queue.
+Uses a doubly linked list internally to store the elements. 
+Allows duplicate elements. 
+Allows null values.
+Maintains the insertion order
+Non-Synchronized.
+Best for manipulating the data.
 ```
 ## ArrayList Vs LinkedList
 ![image](https://user-images.githubusercontent.com/70185865/149060098-5914b8ac-f6fd-4a71-b046-0cbdaf8f272a.png)
