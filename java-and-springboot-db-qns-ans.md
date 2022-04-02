@@ -1517,3 +1517,22 @@ COMMIT;
 204 No Content. There is no content to send for this request, but the headers may be useful. 
 ```
 </details>
+	
+#### 205
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+The HTTP 205 Reset Content response status tells the client to reset the document view, so for example to clear the content of a form, reset a canvas state, or to refresh the UI. 
+```
+</details>
+	
+#### 206
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+206 Partial Content success status response code indicates that the request has succeeded and the body contains the requested ranges of data, as described in the Range header of the request.  
+```
+</details>
+	
