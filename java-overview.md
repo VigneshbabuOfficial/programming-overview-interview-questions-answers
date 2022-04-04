@@ -853,7 +853,38 @@ The stack is the subclass of Vector. It implements the last-in-first-out data st
 ```
 </details>
 
+### Queue Interface
+```JS
+The queue interface maintains the first-in-first-out order. It can be defined as an ordered list.
+```
+#### Priority Queue Class
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+The PriorityQueue class implements the Queue interface. PriorityQueue doesn't allow null values to be stored in the queue.	
+```
+</details>
 
+#### Deque Interface
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Deque interface extends the Queue interface. Deque stands for a double-ended queue which enables us to perform the operations at both ends.	
+```
+</details>
+
+#### Array Deque Class
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+ArrayDeque class implements the Deque interface. ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.	
+```
+</details>
+
+### Set Interface
 
 
 
