@@ -1540,3 +1540,22 @@ The HTTP 205 Reset Content response status tells the client to reset the documen
 ```
 </details>
 	
+### Redirection messages
+#### 301
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+301 Moved Permanently, The URL of the requested resource has been changed permanently. The new URL is given in the response.  
+```
+</details>
+	
+#### 302
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+302 Found, This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.
+
+```
+</details>
