@@ -885,7 +885,74 @@ ArrayDeque class implements the Deque interface. ArrayDeque is faster than Array
 </details>
 
 ### Set Interface
+#### HashSet
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java HashSet class is used to create a collection that uses a hash table for storage.
+HashSet stores the elements by using a mechanism called hashing.
+HashSet contains unique elements only.
+HashSet allows null value.
+HashSet class is non-synchronized.
+HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+HashSet is the best approach for search operations.
+The initial default capacity of HashSet is 16, and the load factor is 0.75.
+```
+</details>
 
+#### HashSet
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java HashSet class is used to create a collection that uses a hash table for storage.
+HashSet stores the elements by using a mechanism called hashing.
+HashSet contains unique elements only.
+HashSet allows null value.
+HashSet class is non-synchronized.
+HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+HashSet is the best approach for search operations.
+The initial default capacity of HashSet is 16, and the load factor is 0.75.
+```
+</details>
+
+##### Internal working of Set/HashSet 
+![image](https://user-images.githubusercontent.com/70185865/161666372-7b720e5e-9c4d-4438-bedd-5df0717ea148.png)
+
+#### LinkedHashSet
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Stores unique elements.
+Maintains insertion order.
+Non-Synchronized.
+```
+</details>
+
+#### SortedSet Interface
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+SortedSet is the alternate of Set interface that provides a total ordering on its elements. 
+The elements of the SortedSet are arranged in the increasing (ascending) order
+```
+</details>
+
+#### TreeSet
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+TreeSet class contains unique elements only like HashSet.
+TreeSet class access and retrieval times are quiet fast.
+TreeSet class doesn't allow null element.
+TreeSet class is non synchronized.
+TreeSet class maintains ascending order.
+```
+</details>
 
 
 
