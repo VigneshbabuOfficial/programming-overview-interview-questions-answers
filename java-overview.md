@@ -954,6 +954,50 @@ TreeSet class maintains ascending order.
 ```
 </details>
 
+### Map Interface
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Map stores elements in the form of key and value pairs.
+A Map is useful if you have to search, update or delete elements on the basis of a key.
+```
+</details>
+
+![image](https://user-images.githubusercontent.com/70185865/161807487-8913b02c-2088-485e-8704-e98b3f387b87.png)
+
+#### HashMap
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java HashMap contains values based on the key.
+Java HashMap contains only unique keys.
+Java HashMap may have one null key and multiple null values.
+Java HashMap is non-synchronized.
+Java HashMap maintains no order.
+The initial default capacity of the Java HashMap class is 16 with a load factor of 0.75.
+```
+</details>
+
+#### Load Factor
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+The Load factor is a measure that decides when to increase the HashMap capacity to maintain the get() and put() operation complexity of O(1). 
+The default load factor of HashMap is 0.75f (75% of the map size).
+```
+</details>
+
+#### Hashing
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+It is the process of converting an object into an integer value. The integer value helps in indexing and faster searches.
+```
+</details>
 
 
 ## JAVA 8 FEATURES
