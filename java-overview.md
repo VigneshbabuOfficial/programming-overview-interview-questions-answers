@@ -999,6 +999,96 @@ It is the process of converting an object into an integer value. The integer val
 ```
 </details>
 
+#### Working of HashMAp
+[working-of-hashmap-in-java](https://www.javatpoint.com/working-of-hashmap-in-java)
+[internal-working-of-hashmap-java](https://www.geeksforgeeks.org/internal-working-of-hashmap-java/)
+
+#### Concurrent HashMap
+[concurrenthashmap](https://medium.com/javarevisited/comparing-hashmap-and-concurrenthashmap-in-java-e131769c2eec)
+[concurrency-exception](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#concurrency-exception)
+
+#### LinkedHashMap 
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java LinkedHashMap maintains insertion order.
+Java LinkedHashMap is non-synchronized.
+Java LinkedHashMap contains unique elements.
+```
+</details>
+
+#### TreeMap
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java TreeMap contains only unique elements.
+Java TreeMap cannot have a null key but can have multiple null values.
+Java TreeMap is non-synchronized.
+Java TreeMap maintains ascending order.
+```
+</details>
+
+#### Comparable Interface
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java Comparable interface is used to order the objects of the user-defined class. 
+This interface is found in java.lang package and contains only one method named compareTo(Object).
+It provides a single sorting sequence only, i.e., you can sort the elements on the basis of single data member only. 
+For example, it may be rollno, name, age or anything else. 
+
+compareTo(Object obj) method
+
+public int compareTo(Object obj): It is used to compare the current object with the specified object. It returns
+
+    positive integer, if the current object is greater than the specified object.
+    negative integer, if the current object is less than the specified object.
+    zero, if the current object is equal to the specified object.
+
+We can sort the elements of:
+
+    String objects
+    Wrapper class objects
+    User-defined class objects
+```
+</details>
+
+
+```JS
+Comparable interface Exampple
+
+```
+<details>
+<summary>:interrobang:</summary>
+	
+```JS
+Note: String class and Wrapper classes implement the Comparable interface by default. So if you store the objects of string or wrapper classes in a list, set or map, it will be Comparable by default.
+```
+</details>
+
+#### Comparator interface
+
+<details>
+<summary>:bulb:</summary>
+	
+```JS
+Java Comparator interface is used to order the objects of a user-defined class and provides multiple sorting sequences, 
+i.e., you can sort the elements on the basis of any data member, for example, rollno, name, age or anything else.
+
+public int compare(Object obj1, Object obj2)
+
+```
+</details>
+
+
+```JS
+Comparator interface Exampple
+
+```
+
 
 ## JAVA 8 FEATURES
 [java-8-features](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#java-8-features)
