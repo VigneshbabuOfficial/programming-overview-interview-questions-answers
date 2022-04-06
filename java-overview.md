@@ -1000,11 +1000,11 @@ It is the process of converting an object into an integer value. The integer val
 </details>
 
 #### Working of HashMAp
-[working-of-hashmap-in-java](https://www.javatpoint.com/working-of-hashmap-in-java)
+[working-of-hashmap-in-java](https://www.javatpoint.com/working-of-hashmap-in-java) || 
 [internal-working-of-hashmap-java](https://www.geeksforgeeks.org/internal-working-of-hashmap-java/)
 
 #### Concurrent HashMap
-[concurrenthashmap](https://medium.com/javarevisited/comparing-hashmap-and-concurrenthashmap-in-java-e131769c2eec)
+[concurrenthashmap](https://medium.com/javarevisited/comparing-hashmap-and-concurrenthashmap-in-java-e131769c2eec) || 
 [concurrency-exception](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#concurrency-exception)
 
 #### LinkedHashMap 
@@ -1053,14 +1053,89 @@ We can sort the elements of:
     String objects
     Wrapper class objects
     User-defined class objects
+
+
+-------------------------------------------------------------------------------------------
+package collectionExample;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Student implements Comparable<Student> {
+	Integer rollno;
+	String name;
+	Integer age;
+
+	Student(Integer rollno, String name, Integer age) {
+		this.rollno = rollno;
+		this.name = name;
+		this.age = age;
+	}
+
+	public int compareTo(Student st) {
+		if (age == st.age)
+			return 0;
+		// ascending
+		else if (age > st.age)
+			return 1;
+		// descending
+		/*
+		 * else if (age < st.age) return 1;
+		 */
+		else
+			return -1;
+	}
+
+	@Override
+	public String toString() {
+		return this.rollno + " | " + this.name + " | " + this.age;
+	}
+}
+
+public class ComparableExample {
+
+	public static void main(String args[]) {
+		ArrayList<Student> al = new ArrayList<Student>();
+		al.add(new Student(101, "Vijay", 23));
+		al.add(new Student(106, "Ajay", 27));
+		al.add(new Student(105, "Jai", 21));
+
+		System.out.println("");
+		System.out.println("Sorting By Comparable");
+
+		Collections.sort(al);
+		for (Student st : al) {
+			System.out.println(st.rollno + " | " + st.name + " | " + st.age);
+		}
+
+		System.out.println("");
+
+		System.out.println("Sorting By Stream API");
+
+		// sorting ascending by using stream
+		al.stream().sorted((a, b) -> a.age.compareTo(b.age)).forEach(System.out::println);
+		// sorting descending by using stream
+		al.stream().sorted((a, b) -> b.age.compareTo(a.age)).forEach(System.out::println);
+	}
+}
+
+	:OUTPUT:
+	
+Sorting By Comparable
+105 | Jai | 21
+101 | Vijay | 23
+106 | Ajay | 27
+
+Sorting By Stream API
+105 | Jai | 21
+101 | Vijay | 23
+106 | Ajay | 27
+106 | Ajay | 27
+101 | Vijay | 23
+105 | Jai | 21
 ```
 </details>
 
-
-```JS
-Comparable interface Exampple
-
-```
 <details>
 <summary>:interrobang:</summary>
 	
@@ -1083,11 +1158,10 @@ public int compare(Object obj1, Object obj2)
 ```
 </details>
 
+[Comparator interface Exampple](https://www.javatpoint.com/Comparator-interface-in-collection-framework)
 
-```JS
-Comparator interface Exampple
-
-```
+#### Comparable Vs Comparator
+![image](https://user-images.githubusercontent.com/70185865/161889995-0eb78db3-bc73-4d86-9c6a-8c9bcc795931.png)
 
 
 ## JAVA 8 FEATURES
