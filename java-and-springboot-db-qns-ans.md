@@ -6,11 +6,11 @@
 ```JS
 Interface is the blueprint of the class. Inorder to use it must be inherited with a class.
 It may have both fields and methods.
-All the Fields are public static final.
+All the Fields are public static final by default.
 Methods are public abstract by default.
-Non-static and default methods must have body. And also we can override into the inherited methods.
+Static and Default methods must have body.
 Interface static methods and fields can be used inside the inherited static methods only.
-All the Interface methods must be overriden except default methods.
+All the Interface methods must be overriden except default and static methods.
 ```
 ```JAVA
  public interface TestingInterface {
@@ -74,7 +74,10 @@ public class TestingInterfaceClass implements TestingInterface {
 ## Difference between Interface and Abstract class
 
 ### What is Abstract Class
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Must be declared with abstract keyword.
 An object can’t be created for this so it should be extended.
 It can have both abstract and non-abstract methods. 
@@ -82,34 +85,41 @@ The abstract method must be overridden in sub-class and non-abstract methods are
 Non-abstract methods must have a method body.
 It allows final methods also.
 ```
-### Differences
+</details>
 
+### Differences
+<details>
+	<summary>:bulb:</summary>
+	
 | Abstract class | Interface |
 | --- | --- |
 | Abstract class doesn't support multiple inheritance. | Interface supports multiple inheritance. |
 | Abstract class can have final, non-final, static and non-static variables. | Interface has only static and final variables. |
 | Abstract class can have final methods. | Interface must have only non-final methods. |
 | Abstract class can have constructors. | Interface can't have constructors. |
+</details>	
 
-____________________________________________________________________________________________
 
 ## Abstract and Normal ( Concrete ) class
-
+<details>
+	<summary>:bulb:</summary>
+	
 | Abstract class | Concrete Class |
 | --- | --- |
 | An abstract class cannot be directly instantiated using the new keyword. | A concrete class can be directly instantiated using the new keyword. |
 | An abstract class may or may not contain abstract methods. | A concrete class cannot contain an abstract method. |
 | An abstract class cannot be declared as final. | A concrete class can be declared as final. |
 | Implement an interface is possible by not providing implementations of all of the interface’s methods. For this a child class is needed.. | Easy implementation of all of the methods in the interface. |
+</details>
 
-
-____________________________________________________________________________________________
 
 ## Why JAVA is not supporting the call by reference?
 
 https://youtu.be/L94X_orDVWw
-
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 public class Exercises {
 	
 	static void callByReference(int b) {
@@ -133,12 +143,14 @@ public class Exercises {
 
 ```
 
-```
+```JS
+OUTPUT:
+	
 before - method call - a - 10
 after - method call - a - 10
 ```
+</details>
 
-____________________________________________________________________________________________
 
 ## How to achieve Immutable class?
 
