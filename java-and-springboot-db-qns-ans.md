@@ -1,7 +1,9 @@
 # JAVA Interview Questions & Answers
 ## Explain interface default methods
+<details>
+<summary>:bulb:</summary>
 
-```
+```JS
 Interface is the blueprint of the class. Inorder to use it must be inherited with a class.
 It may have both fields and methods.
 All the Fields are public static final.
@@ -10,9 +12,7 @@ Non-static and default methods must have body. And also we can override into the
 Interface static methods and fields can be used inside the inherited static methods only.
 All the Interface methods must be overriden except default methods.
 ```
-### Code Snippet :
-
- ```
+```JAVA
  public interface TestingInterface {
 	
 	// public static final
@@ -68,8 +68,8 @@ public class TestingInterfaceClass implements TestingInterface {
 		// TestingInterface.a = 20;
 	}
  
- ```
-____________________________________________________________________________________________
+ ```	
+</details>
 
 ## Difference between Interface and Abstract class
 
