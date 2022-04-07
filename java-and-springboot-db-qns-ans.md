@@ -153,15 +153,17 @@ after - method call - a - 10
 
 
 ## How to achieve Immutable class?
-
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 The class must be declared as final so that child classes can’t be created.
 Data members in the class must be declared private so that direct access is not allowed.
 Data members in the class must be declared as final so that we can’t change the value of it after object creation.
 A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
 There should be no setters or in simpler terms, there should be no option to change the value of the instance variable.
 ```
-____________________________________________________________________________________________
+</details>
 
 ## Explain string constant pool
 
@@ -188,7 +190,6 @@ false
 ![IMG_20211030_073830](https://user-images.githubusercontent.com/70185865/144313392-823498bf-ac22-48af-95f8-b578513b9305.jpg)
 ![IMG_20211030_073846](https://user-images.githubusercontent.com/70185865/144313480-1b03a2e9-0e5c-4b44-abfd-592f449e5ec7.jpg)
 
-____________________________________________________________________________________________
 
 ## Exceptions
 
