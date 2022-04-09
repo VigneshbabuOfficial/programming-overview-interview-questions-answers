@@ -166,8 +166,13 @@ There should be no setters or in simpler terms, there should be no option to cha
 </details>
 
 ## Explain string constant pool
+<details>
+	<summary>:bulb:</summary>
+	
 
-```
+![IMG_20211030_073830](https://user-images.githubusercontent.com/70185865/144313392-823498bf-ac22-48af-95f8-b578513b9305.jpg)
+![IMG_20211030_073846](https://user-images.githubusercontent.com/70185865/144313480-1b03a2e9-0e5c-4b44-abfd-592f449e5ec7.jpg)
+```JS
 String s1 = "java";
 String s2 = "java";
 String s3 = "java";
@@ -187,39 +192,46 @@ s1==s2
 false
 ------------------------------
 ```
-![IMG_20211030_073830](https://user-images.githubusercontent.com/70185865/144313392-823498bf-ac22-48af-95f8-b578513b9305.jpg)
-![IMG_20211030_073846](https://user-images.githubusercontent.com/70185865/144313480-1b03a2e9-0e5c-4b44-abfd-592f449e5ec7.jpg)
+	
+</details>
+
 
 
 ## Exceptions
-
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 In Java, an exception is an event that disrupts the normal flow of the program which is thrown at runtime.
 ```
-
 ![IMG_20211030_080236](https://user-images.githubusercontent.com/70185865/144315203-ce13405a-3c8c-47f4-9600-0e2c203d8a5b.jpg)
+	
+</details>
 
-____________________________________________________________________________________________
 
 ## Difference between super method  and keyword 
-
-| Super method - super() | super keyword - super |
+<details>
+	<summary>:bulb:</summary>
+	
+| super keyword - super | Super method - super() |
 | --- | --- |
-| The super() in Java is a reference variable that is used to refer parent class constructors. | The super keyword in Java is a reference variable that is used to refer parent class objects. |
+| The super keyword in Java is a reference variable that is used to refer parent class objects. | The super() in Java is a reference variable that is used to refer parent class constructors. |
 | super can be used to call parent class’ variables and methods.| super() can be used to call parent class’ constructors only. |
 | The variables and methods to be called through super keyword can be done at any time inside the **static** methods only. | Call to super() must be first statement in Derived(Student) Class constructor. |
 | If one does not explicitly invoke a superclass variables or methods, by using super keyword, then nothing happens. | If a constructor does not explicitly invoke a superclass constructor by using super(), the Java compiler automatically inserts a call to the no-argument constructor of the superclass. |
-____________________________________________________________________________________________
+
+</details>
 
 ## Calling parent method and constructor
-
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Parent constructor can be called by using super().
 Parent methods and variables can be called from super keyword
 ```
 
-### Code Snippet
-```
+```JS
 public class Exercises2 {
 
 	int Exercises2Var = 100;
@@ -272,11 +284,15 @@ public class Exercises extends Exercises2{
 
 }
 ```
-____________________________________________________________________________________________
+
+</details>
+
 
 ## Constructor overloading
-
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 public class Exercises extends Exercises2 {
 
 	private Exercises() {
@@ -313,37 +329,40 @@ public class Exercises extends Exercises2 {
 
 }
 ```
-
-```
+```JS
 Exercises2 parameterized constructor is called - b = 1000
 Exercises constructor is called
 -----------------------------------------------
 Exercises2 constructor is called
 Exercises parameterized constructor is called - a =100
 ```
-____________________________________________________________________________________________
+	
+</details>
 
 ## Difference between classdefnotfoundexception and classnotfoundexception
+<details>
+	<summary>:bulb:</summary>
 
-```
+```JS
 ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.
 NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
 ```
-____________________________________________________________________________________________
+	
+</details>
 
 ## Concurrency exception
+<details>
+	<summary>:bulb:</summary>
 
-```
+```JS
 The ConcurrentModificationException occurs when an object is tried to be modified concurrently when it is not permissible. This exception usually comes when one is working with Java Collection classes.
 ```
-```
+```JS
 NOTE : 
 whenever using for-each loop, iterator is using behind. So, when we change the original collection values, iterator.next() will be executed and checks modCount. And so if any difference occurs it'll throw an error.
 But, if we use normal for loop with index, it'll directly add / remove element original collection and the size will changed dynamically based on the operations. So, we won't get any exceptions.
 ```
-
-### Code Snippet
-```
+```JS
 package basics;
 
 import java.util.ArrayList;
@@ -378,8 +397,8 @@ Exception in thread "main" java.util.ConcurrentModificationException
 	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:967)
 	at basics.Exercises.main(Exercises.java:18)
 
-
----------------------------------------------------------------------------
+```
+```JS
 
 package basics;
 
@@ -420,29 +439,40 @@ Removing Programming Pearls
 after removed - listOfBooks.size() = 3 - index =3
 List after : [Clean Code, Effective Java, Code Complete]
 ```
-
-____________________________________________________________________________________________
+									     
+</details>
 
 ## what is Serialization and its purpose
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed.
-```
-____________________________________________________________________________________________
+```	
+	
+</details>
 
 ## Override static methods?
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Can we Override static methods in java? We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won't be any run-time polymorphism. Hence the answer is 'No'.
-```
+```	
+	
+</details>
 
 ## What is Functional Interface in java?
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 A functional interface has only one abstract method but it can have multiple default methods.
 @FunctionalInterface annotation is used to ensure an interface can’t have more than one abstract method. The use of this annotation is optional.
 
 The major benefit of java 8 functional interfaces is that we can use lambda expressions to instantiate them and avoid using bulky anonymous class implementation.
 ```
-### Code Snippet
-```
+```JS
 // Java program to demonstrate lambda expressions to implement
 // a user defined functional interface.
 
@@ -471,14 +501,21 @@ class Test
 
 Output: 
 25
-```
+```	
 
+</details>
+	
 ## What is the use of Marker Interface in java with example?
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 A marker interface is an interface that has no methods or constants inside it. It provides run-time type information about objects, so the compiler and JVM have additional information about the object. A marker interface is also called a tagging interface.
 
 Example: In DTO fields we can enable the validation for the specific fields by using marker interface.
-```
+```	
+
+</details>
 
 ## Design patterns and SOLID principles and Agile method
 
@@ -486,7 +523,13 @@ Example: In DTO fields we can enable the validation for the specific fields by u
 
 ### JAVA 8 FEATURES
 
-Reference:
+#### Lambda Expression
+<details>
+	<summary>:bulb:</summary>
+
+```JS
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 	they can be implemented right in the body of a method.
+````
 ```JAVA
 package basics;
 
@@ -528,19 +571,18 @@ OUTPUT:
 This is an example for Lambda expressions
 This is an example for Method Reference
 
-```
+```	
 
+</details>
 	
-#### Lambda Expression
-`
-A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and 	they can be implemented right in the body of a method.
-`
 #### Method Reference
-`
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Its a new technique where we can use method name along with class name or interface like InterFace::methodName / ClassName::methodName inorder to complete a specific task.
-`
-##### Code Snippet
 ```
+```JAVA
 class MRClass {
 	
 	static String showMethod(String str) {
@@ -582,29 +624,40 @@ MRClass - cccc -
 MRInterface - aaaa - 
 MRInterface - bbbb - 
 MRInterface - cccc - 
-```
+```	
+
+</details>
 
 #### Functional interfaces
-[what-is-functional-interface-in-java](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#what-is-functional-interface-in-java)
+[what-is-functional-interface-in-java](#what-is-functional-interface-in-java)
 
 #### Stream API
-`
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Java provides a new additional package in Java 8 called java.util.stream. This package consists of classes, interfaces and enum to allows functional-style operations on the elements. 
-`
+```	
+
+</details>
 
 #### Default methods
-[interface-default-methods](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#explain-interface-default-methods)
+[interface-default-methods](#explain-interface-default-methods)
 
 #### Static methods in interface
 
 #### Optional class
-[optional class](https://github.com/VigneshOfficial2020/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#optional-hands-on)
+[optional class](#optional-hands-on)
 
 #### Collectors class
-`
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria 
-`
-
+```
+</details>	
+	
 #### ForEach() method
 
 ## Java 11 features
@@ -612,18 +665,32 @@ Collectors is a final class that extends Object class. It provides reduction ope
 #### Running Java File with single command - java Classname, means we dont need to compile using javac.
 #### Java String Methods - .isBlank(), .lines(), strip(), stripLeading(), stripTrailing()
 #### Collection to an Array
+<details>
+	<summary>:bulb:</summary>
+	
 ```JAVA
 List sampleList = Arrays.asList("Java", "Kotlin");
 String[] sampleArray = sampleList.toArray(String[]::new);
-```
+```	
+</details>
+	
 #### Not Predicate Method
+<details>
+	<summary>:bulb:</summary>
+	
 ```JAVA
 List<String> sampleList = Arrays.asList("Java", "\n \n", "Kotlin", " ");
 List withoutBlanks = sampleList.stream()
   .filter(Predicate.not(String::isBlank))
   .collect(Collectors.toList());
 ```
+
+</details>
+
 #### Local-Variable Syntax for Lambda
+<details>
+	<summary>:bulb:</summary>
+	
 ```JAVA
 List<String> sampleList = Arrays.asList("Java", "Kotlin");
 String resultString = sampleList.stream()
@@ -631,8 +698,13 @@ String resultString = sampleList.stream()
   .collect(Collectors.joining(", "));
 ```
 
+</details>
+
 #### Nested Based Access Control
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JAVA
 public class Main {
  
     public void myPublic() {
@@ -650,16 +722,21 @@ public class Main {
 }
 
 ```
+	
+</details>
 
 ## Java 16 features
 
 #### Sealed Classes
 
 ## How to use generic for arguments in method
-
 ## How to send HTTP request and receive HTTP response
-#### Java 11 HttpClient
-```
+
+## Java 11 HttpClient
+<details>
+	<summary>:bulb:</summary>
+	
+```JAVA
 package basics;
 
 import java.net.URI;
@@ -750,15 +827,16 @@ public class HttpClientExample {
 }
 
 ```
-
+	
+</details>
+	
 ## Optional Hands on 
-
+<details>
+	<summary>:bulb:</summary>
+	
 ```JS
 This type of execution mostly usedin API side. the value will be retrieved and update if value is present in payload otherwise not.
-```
-
-### Fields declaration
-
+```	
 ```JS
 private String				testField1;
 private Optional<String>	testField2;
@@ -813,11 +891,6 @@ public void setTestFieldBool2( Optional<Boolean> testFieldBool2 ) {
 	this.testFieldBool2 = testFieldBool2;
 }
 ```
-
-------------------------------------------
-
-### PAYLOAD
-
 ```JS
 {
     "testField1":"testField1",
@@ -827,11 +900,6 @@ public void setTestFieldBool2( Optional<Boolean> testFieldBool2 ) {
 }
 
 ```
-
-------------------------------------------------
-
-### CODE SNIPPET
-
 ```JS
 System.out.println( " userDTO.getTestField1()  = " + userDTO.getTestField1() );
 System.out.println( " userDTO.getTestField2() = " + userDTO.getTestField2() );
@@ -843,11 +911,6 @@ System.out.println( " Optional.ofNullable( userDTO.getTestFieldBool2() ).isPrese
 System.out.println( " userDTO.getTestFieldBool2().isPresent() = " + userDTO.getTestFieldBool2().isPresent() );
 System.out.println( " userDTO.getTestFieldBool2().get() = " + userDTO.getTestFieldBool2().get() );
 ```
-
-------------------------------------------
-
-### OUTPUT
-
 ```JS
 userDTO.getTestField1()  = testField1
 
@@ -867,9 +930,9 @@ userDTO.getTestFieldBool2().isPresent() = true
 
 userDTO.getTestFieldBool2().get() = true
 ```
-
-____________________________________________________________________________________________
-
+	
+</details>
+	
 # Multithread Qns
 
 ## What if we call Java run() method directly instead start() method?
@@ -930,8 +993,6 @@ Avoid nested locks.
 Use the join method.
 ```
 </details>
-
-____________________________________________________________________________________________
 
 # Collections Interview Questions and Answers
 
