@@ -8,9 +8,9 @@ https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/
   <summary>:bulb:</summary>
   
   ```JS
-@Configuration (used for Java-based configuration)
-@ComponentScan (used for component scanning)
-@EnableAutoConfiguration (used to enable auto-configuration in Spring Boot).
+@Configuration (used for Java-based configuration) - if not written means, no issues. But ComponentScan should be written.
+@ComponentScan (used for component scanning)  - if not written means, Server will not be accessed.
+@EnableAutoConfiguration (used to enable auto-configuration in Spring Boot) - if not written means, Application itself will not  build successfully / deployed.
 ```
 REF: https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html
 
@@ -42,5 +42,6 @@ https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data
 
 </details>
 
+#### @RestController
 
 
