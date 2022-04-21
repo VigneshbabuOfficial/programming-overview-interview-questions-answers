@@ -43,5 +43,33 @@ https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data
 </details>
 
 #### @RestController
+#### @Bean
+#### @RequestMapping
+#### @Validated
+#### @Autowired
+#### @GetMapping
+#### @PostMapping
+#### @RequestBody
+#### @PutMapping(value = "/{id}")
+#### @PathVariable(name = "id")
+#### @DeleteMapping("/{ids}")
+#### @Service
+#### @Scope
+#### @Entity
+#### @Table
+#### @DynamicInsert
+#### @DynamicUpdate
+#### @SequenceGenerator(allocationSize = 1,name = "students_seq",sequenceName = "students_seq")
+#### @Id
+#### @NotNull(message="id must not be null")
+#### @Column(name = "id", columnDefinition = "default nextval('students_seq'::regclass)")
+#### @GeneratedValue(generator = "students_seq",strategy = GenerationType.SEQUENCE)
+#### @JsonFormat(pattern = "yyyy-MM-dd")
+#### @Repository
+#### @ControllerAdvice
+#### @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+#### @ExceptionHandler({Exception.class})
+
+
 
 
