@@ -1633,3 +1633,6 @@ The HTTP 205 Reset Content response status tells the client to reset the documen
 
 ```
 </details>
+
+### REST API Qns
+https://www.interviewbit.com/rest-api-interview-questions/
