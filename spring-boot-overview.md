@@ -331,3 +331,5 @@ spring.security.user.password=password
 https://github.com/VigneshbabuOfficial?tab=repositories&q=jwt&type=&language=&sort=
 
 
+#### SPRING BOOT INTERVIEW QNs
+[SPRING BOOT INTERVIEW QNs](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/java-and-springboot-db-qns-ans.md#spring-questions--answers)
