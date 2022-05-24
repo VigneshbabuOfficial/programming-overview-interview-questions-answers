@@ -1354,6 +1354,9 @@ We can enable the auto-configuration feature by using the annotation @EnableAuto
 ## How Spring boot application works internally?
 ![spring-boot-internal-working-diag](https://user-images.githubusercontent.com/70185865/146032786-004189ff-480a-45e1-96f1-b6ff980800e3.png)
 
+## SPRING BOOT INTERVIEW QNs
+[spring-boot-interview-qns.pdf](https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/files/8763933/spring-boot-interview-qns.pdf)
+
 
 ____________________________________________________________________________________________
 ____________________________________________________________________________________________
