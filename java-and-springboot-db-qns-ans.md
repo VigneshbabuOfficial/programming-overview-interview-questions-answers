@@ -1098,7 +1098,16 @@ https://www.baeldung.com/spring-qualifier-annotation
 
 ```JS
 System.getProperty("library.system.property")
-@value(${library.system.property})
+	
+@value("${library.system.property}")
+	
+@PropertySources({
+    @PropertySource("classpath:foo.properties"),
+    @PropertySource("classpath:bar.properties")
+})
+public class PropertiesWithJavaConfig {
+    //...
+}
 ```
 
 </details>
@@ -1214,37 +1223,65 @@ Three objects point to the same memory location on the heap i.e, to the same obj
 
 ## What is AOP?
 
-```
+<details>
+<summary>:bulb:</summary>	
+
+```JS
 AOP (Aspect-Oriented Programming) is a programming pattern that increases modularity by allowing the separation of the cross-cutting concern.
 ```
 
+</details>
+
 ## What are annotations used for controller class
-```
+	
+<details>
+<summary>:bulb:</summary>
+
+```JS
 @RestController is a convenience annotation for creating Restful controllers
 ```
 
+</details>
+
+	
 ## What is Dependency Injection?
-```
-It's a technique work done by the use of another class. It can be done by normal setter, by constructor and by @Autowired.
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
+Dependency Injection is a fundamental aspect of the Spring framework, through which the Spring container “injects” objects into other objects or “dependencies” cy constructor or by fields Autowired.
 ```
 
+</details>	
+
 ## What is IOC?
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
+Inversion Of Control. It's a framework for implementing automatic dependency injection. The IoC container creates an object of the specified class and also injects the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
 ```
-It's a framework for implementing automatic dependency injection. The IoC container creates an object of the specified class and also injects the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
-```
+</details>
 
 ## Spring-boot Authentication
 
 ## Spring-boot latest version features
 
-## How to ignore a class in spring boot 
+## How to ignore a class in spring boot
+<details>
+	<summary>:bulb:</summary>
+	
+	
 https://stackoverflow.com/questions/55403688/exclude-configuration-from-spring-boot-application
-
-```
+```JS
 @SpringBootApplication(exclude= {WorkerExecutors.class, Worker.class,WorkerConfig.class})
 public class Application {
+	............
+	}
 ```
+</details>	
 
+	
 ## Internal process of singleton and its purpose
 
 [singleton](https://github.com/VigneshOfficial2020/interview-questions-answers/blob/main/Important%20Interview%20Question%20and%20Answers.md#what-is-singleton)
