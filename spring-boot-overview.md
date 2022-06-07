@@ -46,6 +46,7 @@ https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data
 #### @Bean
 #### @RequestMapping
 #### @Validated
+#### @Qualifier
 #### @Autowired
 #### @GetMapping
 #### @PostMapping
