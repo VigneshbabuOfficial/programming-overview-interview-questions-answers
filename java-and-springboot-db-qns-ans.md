@@ -1054,43 +1054,79 @@ ________________________________________________________________________________
 
 # SPRING QUESTIONS & ANSWERS
 
-## why rest api stateless?
-```
-REST stands for representational state transfer.
+## why REST API stateless?
+<details>
+<summary>:bulb:</summary>
+
+```JS
+REST stands for REpresentational State Transfer.
 Being stateless makes REST APIs less complex – by removing all server-side state synchronization logic. A stateless API is also easy to cache as well. ... The server never loses track of “where” each client is in the application because the client sends all necessary information with each request.
 ```
+</details>
 
 ## What is stateless and stateful in REST API?
 
-```
+<details>
+<summary>:bulb:</summary>
+	
+```JS
 Stateless Protocol does not require the server to retain the server information or session details. Stateful Protocol require server to save the status and session information. In Stateless Protocol, there is no tight dependency between server and client.
 ```
+</details>
 
 ## What is @Qualifier and it's usage and what is purpose @qualifier in spring?
-```
+
+<details>
+	<summary>:bulb:</summary>
+	
+
+```JS
 The @Qualifier annotation is used to resolve the autowiring conflict, when there are multiple beans of same type. The @Qualifier annotation can be used on any class annotated with @Component or on method annotated with @Bean . This annotation can also be applied on constructor arguments or method parameters
 ```
 
+https://www.baeldung.com/spring-qualifier-annotation
+
+
+</details>
+
+
 ## How to access system properties?
-```
+	
+<details>
+	<summary>:bulb:</summary>
+
+
+```JS
 System.getProperty("library.system.property")
 @value(${library.system.property})
 ```
 
+</details>
+
+
 ## What is Singleton?  
-```
+	
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 A singleton is a class that allows only a single instance of itself to be created and gives access to that created instance.
 ```
 
+</details>	
+
+
 ## How to achieve Singleton?
 
-```
+<details>
+<summary>:bulb:</summary
+	
+```JS
 Make constructor private.
 Write a static method that has return type object of this singleton class.
 ```
-### Code Snippet
 
-```
+```JAVA
 // Java program implementing Singleton class
 // with using getInstance() method
 
@@ -1166,11 +1202,15 @@ class GFG {
 ------------------------------------------------------------------------------------
 
 OUTPUT:
+-----------------
 Hashcode of x is 558638686
 Hashcode of y is 558638686
 Hashcode of z is 558638686
 Three objects point to the same memory location on the heap i.e, to the same object
 ```
+
+</details>
+
 
 ## What is AOP?
 
