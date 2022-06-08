@@ -1267,7 +1267,7 @@ Inversion Of Control. It's a framework for implementing automatic dependency inj
 
 ## Spring-boot latest version features
 
-## How to ignore a class in spring boot
+## How to ignore / exclude a class in spring boot
 <details>
 	<summary>:bulb:</summary>
 	
@@ -1284,10 +1284,13 @@ public class Application {
 	
 ## Internal process of singleton and its purpose
 
-[singleton](https://github.com/VigneshOfficial2020/interview-questions-answers/blob/main/Important%20Interview%20Question%20and%20Answers.md#what-is-singleton)
+[singleton](#what-is-singleton)
 
 ## Ways to connect DB in spring boot
-```
+<details>	
+<summary>:bulb:</summary>	
+
+```JS
 From Application.properties file
 
 spring.jpa.hibernate.ddl-auto=none
@@ -1295,20 +1298,24 @@ spring.datasource.url=<<JDBC_URL>>
 spring.datasource.username=<<user_name>>
 spring.datasource.password=<<password>>
 ```
+</details>
 
 ## Difference b/w Redirect and Forward
+<details>
+	<summary>:bulb:</summary>
 
 | Forward | Redirect |
 | --- | --- |
 | The client isn't impacted by forward, URL in a browser stays the same. | The client will see the URL change after the redirect. |
 | Request attributes and  parameters will be the same. | A new request is created. So, params and aattributes will get lost. |
 | RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath()); rd.forward(request, response); | resp.sendRedirect(req.getContextPath() + "/redirected"); |
+</details>
 
 
 ## Spring security in spring boot
 
 ## How to communicate between applications in spring boot
-```
+```JS
 That depends on your choice, weather you want sync communication or async communication between your services.
 
 For sync services you can use either of these 3rd party tools:
@@ -1325,13 +1332,14 @@ NATS etc
 ```
 
 ## Fail fast and fail safe difference
-```
+<details>
+<summary>:bulb:</summary>
+
+```JS
 The major difference is fail-safe iterator doesn’t throw any Exception, contrary to fail-fast Iterator.This is because they work on a clone of Collection instead of the original collection and that’s why they are called as the fail-safe iterator.
 ```
-### Fail fast - Code Snippet
-```
-// Java code to demonstrate remove
-// case in Fail-fast iterators
+```JAVA
+// Fail-fast iterators - Java code to demonstrate remove
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -1374,10 +1382,10 @@ Exception in thread "main" java.util.ConcurrentModificationException
     at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
     at java.util.ArrayList$Itr.next(ArrayList.java:851)
     at FailFastExample.main(FailFastExample.java:28)
-```
 
-### Fail safe - Code Snippet
-```
+
+----------------------  Fail safe -----------------------------------
+
 // Java code to illustrate
 // Fail Safe Iterator in Java
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -1408,8 +1416,13 @@ OUTPUT:
 5
 8
 ```
+</details>
+
 ## What is Spring boot Auto configuration
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 Spring Boot auto-configuration automatically configures the Spring application based on the jar dependencies that we have added.
 
 For example, if the H2 database Jar is present in the classpath and we have not configured any beans related to the database manually, the Spring Boot's auto-configuration feature automatically configures it in the project.
@@ -1418,15 +1431,25 @@ We can enable the auto-configuration feature by using the annotation @EnableAuto
 
 @SpringBootApplication=@ComponentScan+@EnableAutoConfiguration+@Configuration
 ```
+</details>
 
 ## Differnece between Spring And Spring boot
+<details>
+	<summary>:bulb:</summary>
+	
 ![image](https://user-images.githubusercontent.com/70185865/144986167-5aa51ca3-8a01-402e-8afb-b5a8382c1ba3.png)
+</details>
 
 ## How to exclude classes in spring boot
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 @ComponentScan(excludeFilters  = {@ComponentScan.Filter(
               type = FilterType.ASSIGNABLE_TYPE, classes = {WorkerConfig.class, WorkerExecutors.class, Worker.class})})
 ```
+[exclude-classes](#how-to-ignore--exclude-a-class-in-spring-boot)
+</details>
 
 ## How Spring boot application works internally?
 ![spring-boot-internal-working-diag](https://user-images.githubusercontent.com/70185865/146032786-004189ff-480a-45e1-96f1-b6ff980800e3.png)
