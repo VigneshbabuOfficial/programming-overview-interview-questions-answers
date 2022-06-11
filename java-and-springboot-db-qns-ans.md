@@ -1469,18 +1469,30 @@ https://github.com/VigneshOfficial2020/spring-boot-cache-demo-app
 
 ## How to write a select query with 2 schema postgres
 
+## JPA vs HIBERNATE
+<details>
+	<summary>:bulb:</summary>
+	
+![image](https://user-images.githubusercontent.com/70185865/173165258-2300e5a9-fb9e-4a52-944d-bab23e570021.png)
+
+</details>
+
 ## Jpa create table/column automatically configuration
-```
-# if any table or column is missing in DB below command will create them specifically during build process
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
+If any table or column is missing in DB below command will create them specifically during build process
 spring.jpa.generate-ddl=true
 
-# if any table or column is missing in DB below command will drop and create them during build process
+If any table or column is missing in DB below command will drop and create them during build process
 #spring.jpa.hibernate.ddl-auto = update 
 #spring.jpa.hibernate.ddl-auto = create
 ```
+	
+</details>
 
 ## many to many / many to one / one to many associations
-```
 many to one
 -----------
 ===== >>> in the table_1
@@ -1501,14 +1513,19 @@ One To Many / ManyToMany
 @OrderBy(value = "name ASC")
 private List<Table_1>				table_1						= new ArrayList<>();
 
-```
+	
+</details>	
 
 ## What will return on left outer join - if condition not meet with table_2
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 table_2 values will be shown as null.
 ```
 ref: https://towardsdatascience.com/what-is-the-difference-between-an-inner-and-an-outer-join-in-sql-5b5ec8277377
-
+</details>
+	
 ## Postgres cheat-sheet
 
 ![image](https://user-images.githubusercontent.com/70185865/145044344-bddd2f6e-4180-4028-a990-7f25564a6b12.png)
@@ -1519,15 +1536,22 @@ ref: https://towardsdatascience.com/what-is-the-difference-between-an-inner-and-
 
 
 ## Difference between Truncate, DROP & DELETE
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
 The DELETE statement scans every row before deleting it. Thus it is slower as compared to TRUNCATE command. If we want to delete all the records of a table, it is preferable to use TRUNCATE in place of DELETE.
 
 A DROP statement in SQL removes a component from a relational database management system (RDBMS). DROP is a DDL Command. Objects deleted using DROP are permanently lost and it cannot be rolled back.
 ```
 ref : https://afteracademy.com/blog/what-is-the-difference-between-truncate-delete-and-drop-statements
+</details>
 
 ## Rename the column name and change the type
-```
+<details>
+	<summary>:bulb:</summary>
+	
+```SQL
 ALTER TABLE public.clients
     ALTER COLUMN client_name_1 type int
 	using client_name_1::integer;
@@ -1538,13 +1562,20 @@ ALTER TABLE public.clients
 	
 ALTER TABLE public.clients RENAME COLUMN client_name_1 to client_name_2;
 ```
-
+</details>
+	
 ## Postgres queries examples
 https://www.enterprisedb.com/postgres-tutorials/postgresql-query-introduction-explanation-and-50-examples
 
 ## Explain Transactional annnotation ( @Transactional )
-`It used to provide database transaction for the queries which we used to execute or by using jpa methods. So, whenever exception occurs this will be roll back automatically.`
-
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
+It used to provide database transaction for the queries which we used to execute or by using jpa methods. So, whenever exception occurs this will be roll back automatically.
+```
+</details>
+	
 ### Propagation
 #### Required , Nested  SUPPORTS , MANDATORY , NEVER , NOT_SUPPORTED , REQUIRES_NEW 
 
