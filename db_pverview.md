@@ -1,0 +1,7 @@
+## JPA / HIBERNATE
+
+## POSTGRES
+
+## MY SQL
+
+## INTERVIEW QNS
