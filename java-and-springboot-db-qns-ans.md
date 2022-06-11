@@ -1662,6 +1662,8 @@ COMMIT;
 
 ```
 
+https://github.com/VigneshbabuOfficial/programming-overview-interview-questions-answers/blob/main/db_overview.md
+
 ## HTTP STATUS CODES
 ### Information responses
 #### 100
