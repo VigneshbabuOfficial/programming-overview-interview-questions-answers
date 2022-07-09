@@ -1772,3 +1772,16 @@ The HTTP 205 Reset Content response status tells the client to reset the documen
 
 ### REST API Qns
 https://www.interviewbit.com/rest-api-interview-questions/
+
+### Stream and Parallel Stream
+<details>
+	<summary>:bulb:</summary>
+	
+```JS
+Stream uses sequential order to perform the action on the collection of objects and its uses single thread to accomplish the final result.
+Parallel Stream uses multiple thread with help of multiple core of the system to accomplish the task. Yes by performance wise it's quite faster than Sequential one. But it should be used for huge number of data.	
+```	
+</details>	
+	
+	
+	
