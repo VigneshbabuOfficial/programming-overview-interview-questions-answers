@@ -1783,5 +1783,14 @@ Parallel Stream uses multiple thread with help of multiple core of the system to
 ```	
 </details>	
 	
+### Transient annotations
+<details>
+	<summary>:bulb:</summary>
 	
+```JS
+Transient annotation is used to ignore the field that not be persist in DB. For example, if DB has fiest name and last name columns and not having full name column, we can declare a column as Transient to produce full name by combining those columns and that column won't be persist in DB.
+
+While Transient is a keyword which is used to ignore the field from serialization.	
+```
+</details>	
 	
