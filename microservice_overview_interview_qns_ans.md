@@ -1,5 +1,58 @@
 ## MICROSERVICE
 
+## IMPLEMENTATION - CLIENT SERVICE - 1
+
+```JS
+Create a new Service with dependencies Web, Eureka Client as CLIENT-SERVICE-1
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179579456-071538f5-c897-4950-b091-e5fc39c30c6d.png)
+
+
+```JS
+At ClientService1Application, add RestTemplate and Logger beans
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179580162-9473c69d-dc61-44ee-ab4b-9f41964aefb3.png)
+
+```JS
+Implement 3 end-points @FirstClientController class
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179576710-1266233d-ca41-4345-8bdc-2be3c2bcf955.png)
+
+```JS
+Add some properties in properties file
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179580647-3e42c495-eb67-4b0f-a8c8-3bcd9539cfd9.png)
+
+
+## IMPLEMENTATION - CLIENT SERVICE - 2
+
+```JS
+Implement the same on Client Service 2
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179579456-071538f5-c897-4950-b091-e5fc39c30c6d.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179581444-355911f2-f257-419e-8cd6-7b17ab177332.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179577236-30ea786d-9ec4-45cf-a553-8bc893772a8b.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179581597-ae1a8c65-4bdf-4754-8c8f-79b91c41b810.png)
+
+
+
+## IMPLEMENTATION - SERVICE REGISTRY
+
+```JS
+Go to the application class (ClientService1Application) and add the annotation @EnableEurekaClient
+```
+
+
+## IMPLEMENTATION - API GATEWAY
+
 
 ### ELK
 
