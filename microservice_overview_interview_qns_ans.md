@@ -73,8 +73,23 @@ Add Eureka server as dependency to make service registry
 ![image](https://user-images.githubusercontent.com/70185865/179603809-746e88bf-69ac-499e-b064-8847c221ba7b.png)
 
 
+### ADDED ZIPKIN & SLEUTH
 
+![image](https://user-images.githubusercontent.com/70185865/179609416-d7146a86-6406-44f3-9f7e-0812e15e7640.png)
 
+```JS
+
+goto - https://zipkin.io/pages/quickstart.html
+
+download jar and execute and note the port number which is running on. most probably it'll be 9411
+
+add this property on all client services
+
+spring.zipkin.base-url=http://localhost:9411
+
+```
+
+REF :  https://www.youtube.com/watch?v=BnknNTN8icw&t=4118s
 
 ### ELK
 
