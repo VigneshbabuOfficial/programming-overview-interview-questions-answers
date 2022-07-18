@@ -59,6 +59,22 @@ Add Eureka server as dependency to make service registry
 
 ## IMPLEMENTATION - API GATEWAY
 
+![image](https://user-images.githubusercontent.com/70185865/179600957-b3cb9ef0-e907-4285-88ea-b5229ba0cba7.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179601153-8fe5e2fa-b746-47bc-993c-d98ad3a8c0b7.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179601252-b34530dc-4a4e-45db-9bb8-4640d1d178aa.png)
+
+
+### EUREKA DASHBOARD
+
+@ localhost:8761
+
+![image](https://user-images.githubusercontent.com/70185865/179603809-746e88bf-69ac-499e-b064-8847c221ba7b.png)
+
+
+
+
 
 ### ELK
 
