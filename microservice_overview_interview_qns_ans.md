@@ -87,6 +87,10 @@ add this property on all client services
 
 spring.zipkin.base-url=http://localhost:9411
 
+then hit localhost:9411/zipkin to see the zipkin dashboard.
+
+then we can select the service and provide the trace-id to see the propagation of request.
+
 ```
 
 REF :  https://www.youtube.com/watch?v=BnknNTN8icw&t=4118s
