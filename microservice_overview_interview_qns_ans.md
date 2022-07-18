@@ -47,8 +47,14 @@ Implement the same on Client Service 2
 ## IMPLEMENTATION - SERVICE REGISTRY
 
 ```JS
-Go to the application class (ClientService1Application) and add the annotation @EnableEurekaClient
+Add Eureka server as dependency to make service registry
 ```
+
+![image](https://user-images.githubusercontent.com/70185865/179587990-4e4a1c05-4e00-461b-94fa-1d51c25dd10d.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179588749-e0ee8d84-a7d9-40de-b736-5cde5743a314.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179589818-d01c1fbd-174c-46db-8e99-045911001d3a.png)
 
 
 ## IMPLEMENTATION - API GATEWAY
