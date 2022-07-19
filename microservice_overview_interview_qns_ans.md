@@ -124,14 +124,6 @@ after some time check at the browser localhost:9200
 
 ![image](https://user-images.githubusercontent.com/70185865/179820737-bbfaf14e-df2d-44cd-9ed2-e6a02edbcf99.png)
 
-
-## Logstash
-
-```JS
-Logstash is log pipeline tool where it accepts inputs/logs from various sources and exports to various targets
-
-```
-
 ## Kibana
 
 ```JS
@@ -147,6 +139,40 @@ goto the bin folder and open cmd from there and type kibana.bat
 check at the browser on localhost:5601
 
 ```
+
+## Logstash
+
+```JS
+Logstash is log pipeline tool where it accepts inputs/logs from various sources and exports to various targets
+
+```
+
+```JS
+Open the client service application.properties file and add the log path as
+logging.file:<<location-path>>
+
+so, whenever application is hit logs will be generated in that file.
+```
+
+```JS
+Need to create a logstash.config file
+```
+![image](https://user-images.githubusercontent.com/70185865/179833918-21bf98f0-6cf0-4112-b43f-f89fcd32a744.png)
+
+After config file is created, paste into bin folder. And open CMD
+type logstash -f logstash.config
+
+![image](https://user-images.githubusercontent.com/70185865/179835098-321528dd-c344-4df2-b356-de1a99b2ce7b.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179835204-e6ed6973-25ce-4ecd-8e4f-0ada3dc5e8df.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179835297-00a46b6e-7259-411d-87be-1fd5ac31eecd.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179835502-44d631de-37db-46d2-b925-5b03331f5e26.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179835679-2fffaad0-4021-4a8f-9473-bc994d475b80.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179835815-c7d3b7d3-6ebf-4c0a-86dd-6addd00593cc.png)
 
 
 https://www.youtube.com/watch?v=5s9pR9UUtAU
