@@ -77,11 +77,15 @@ Add Eureka server as dependency to make service registry
 
 ![image](https://user-images.githubusercontent.com/70185865/179609416-d7146a86-6406-44f3-9f7e-0812e15e7640.png)
 
+
 ```JS
-
 goto - https://zipkin.io/pages/quickstart.html
+```
 
-download jar and execute and note the port number which is running on. most probably it'll be 9411
+```JS
+download jar and execute using the command in cmd <<dir_location_path>>java -jar <<zipkin_file_name>>.jar 
+
+and note the port number which is running on. most probably it'll be 9411
 
 add this property on all client services
 
@@ -89,9 +93,17 @@ spring.zipkin.base-url=http://localhost:9411
 
 then hit localhost:9411/zipkin to see the zipkin dashboard.
 
-then we can select the service and provide the trace-id to see the propagation of request.
+do some end-points request of our client services
 
+then we can select the service and provide the trace-id to see the propagation of request.
 ```
+
+![image](https://user-images.githubusercontent.com/70185865/179655936-0e8a4558-9ac3-4306-b564-c7747498e498.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179656002-4f3ad7c7-e930-49f9-bc88-05362abec051.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179656046-4b00a503-4149-4a3d-ae7f-392a073ab786.png)
+
 
 REF :  https://www.youtube.com/watch?v=BnknNTN8icw&t=4118s
 
