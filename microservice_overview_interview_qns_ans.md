@@ -137,6 +137,15 @@ Logstash is log pipeline tool where it accepts inputs/logs from various sources 
 ```JS
 Kibana is a UI layer which helps developer to monnitor the application logs.
 
+Download kibana from https://www.elastic.co/downloads/kibana
+
+goto config folder and open the yml file and un-comment the line 
+elasticsearch.hosts: ["http://localhost:9200"]
+
+goto the bin folder and open cmd from there and type kibana.bat
+
+check at the browser on localhost:5601
+
 ```
 
 
