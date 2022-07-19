@@ -107,7 +107,23 @@ then we can select the service and provide the trace-id to see the propagation o
 
 REF :  https://www.youtube.com/watch?v=BnknNTN8icw&t=4118s
 
-### ELK
+## ELK - Elastic Search , Logstash & Kibana
+
+## Elastic Search
+
+```JS
+
+Elastic search is a NoSql database which is used store the logs
+Download Elastic search from https://www.elastic.co/downloads/elasticsearch 
+Extract and goto the bin folder from there open CMD
+type elasticsearch.bat
+
+after some time check at the browser localhost:9200
+
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179820737-bbfaf14e-df2d-44cd-9ed2-e6a02edbcf99.png)
+
 
 https://www.youtube.com/watch?v=5s9pR9UUtAU
 
