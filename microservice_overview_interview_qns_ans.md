@@ -125,6 +125,21 @@ after some time check at the browser localhost:9200
 ![image](https://user-images.githubusercontent.com/70185865/179820737-bbfaf14e-df2d-44cd-9ed2-e6a02edbcf99.png)
 
 
+## Logstash
+
+```JS
+Logstash is log pipeline tool where it accepts inputs/logs from various sources and exports to various targets
+
+```
+
+## Kibana
+
+```JS
+Kibana is a UI layer which helps developer to monnitor the application logs.
+
+```
+
+
 https://www.youtube.com/watch?v=5s9pR9UUtAU
 
 https://www.javainuse.com/spring/springboot-microservice-elk
