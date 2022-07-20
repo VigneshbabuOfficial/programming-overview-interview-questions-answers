@@ -1,5 +1,17 @@
 ## MICROSERVICE
 
+## IMPLEMENTATION - SERVICE REGISTRY
+
+```JS
+Add Eureka server as dependency to make service registry
+```
+
+![image](https://user-images.githubusercontent.com/70185865/179587990-4e4a1c05-4e00-461b-94fa-1d51c25dd10d.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179588749-e0ee8d84-a7d9-40de-b736-5cde5743a314.png)
+
+![image](https://user-images.githubusercontent.com/70185865/179589818-d01c1fbd-174c-46db-8e99-045911001d3a.png)
+
 ## IMPLEMENTATION - CLIENT SERVICE - 1
 
 ```JS
@@ -41,20 +53,6 @@ Implement the same on Client Service 2
 ![image](https://user-images.githubusercontent.com/70185865/179577236-30ea786d-9ec4-45cf-a553-8bc893772a8b.png)
 
 ![image](https://user-images.githubusercontent.com/70185865/179581597-ae1a8c65-4bdf-4754-8c8f-79b91c41b810.png)
-
-
-
-## IMPLEMENTATION - SERVICE REGISTRY
-
-```JS
-Add Eureka server as dependency to make service registry
-```
-
-![image](https://user-images.githubusercontent.com/70185865/179587990-4e4a1c05-4e00-461b-94fa-1d51c25dd10d.png)
-
-![image](https://user-images.githubusercontent.com/70185865/179588749-e0ee8d84-a7d9-40de-b736-5cde5743a314.png)
-
-![image](https://user-images.githubusercontent.com/70185865/179589818-d01c1fbd-174c-46db-8e99-045911001d3a.png)
 
 
 ## IMPLEMENTATION - API GATEWAY
@@ -175,10 +173,26 @@ type logstash -f logstash.config
 ![image](https://user-images.githubusercontent.com/70185865/179835815-c7d3b7d3-6ebf-4c0a-86dd-6addd00593cc.png)
 
 
+REF :
+
 https://www.youtube.com/watch?v=5s9pR9UUtAU
 
 https://www.javainuse.com/spring/springboot-microservice-elk
 
+
+---------------------------------------------------------------------------------------------------------
+
+
+## Fault Tolerance
+
+
+## High Availability
+
+
+## Circuit Breaker
+
+
+--------------------------------------------------------------------------------------------------------
 
 ## Interview Questions
 
