@@ -184,12 +184,34 @@ https://www.javainuse.com/spring/springboot-microservice-elk
 
 
 ## Fault Tolerance
-
+<details>
+  <summary>:bulb:</summary>
+  
+```JS
+In Microservice application, there may be receive an error response if any error or exception occurs to the request. So, at that time application needs to be recovered and ready to be used immediately with zero downtime.
+So, there we can have zero downtime and cost is higher.
+  ```
+</details>
 
 ## High Availability
-
+<details>
+  <summary>:bulb:</summary>
+  
+```JS
+In Microservice application, there may be receive an error response if any error or exception occurs to the request. So, at that time application needs to be recovered with mins to hours of downtime and also cost is lesser.
+  ```
+</details>
 
 ## Circuit Breaker
+<details>
+  <summary>:bulb:</summary>
+  
+```JS
+The circuit breaker is design pattern when the a praticuler microservice experiences failures or slowness the Circuit Breaker trips for a particular duration, so that clients don't waste their valuable resources handling requests that are likely to fail. Using this concept, you can give the server some spare time to recover.
+  ```
+</details>
+
+
 
 
 --------------------------------------------------------------------------------------------------------
